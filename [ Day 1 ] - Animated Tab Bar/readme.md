@@ -3,7 +3,12 @@
 This project features an animated tab bar developed by Aarzoo as part of the 100 Days of Code challenge. It creates a visually appealing tab interface with dynamic animations using HTML and CSS.
 
 ## Preview
-![preview](https://github.com/withaarzoo/100-Days-of-Code/assets/59678435/71debe05-6bd8-4366-83e3-0c6193ba65b6)
+
+<div style="display: flex; align-items: center; justify-content: center; width: 100%">
+    <img src="preview.gif" alt="preview GIF" width="100%" height="100%"/>
+</div>
+
+This preview showcases the animated tab bar in action.
 
 ## How to Use
 
