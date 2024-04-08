@@ -1,0 +1,140 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the entire page */
+body {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: #fff; /* White background */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Style for the phone container */
+.phone {
+    width: 320px; /* Set width */
+    height: 260px; /* Set height */
+    margin: auto; /* Center horizontally */
+    display: flex; /* Arrange items in a row */
+    align-items: flex-end; /* Align items to the bottom */
+    position: relative; /* Positioning relative to parent */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Style for the phone content */
+.phone_content {
+    filter: contrast(20); /* Adjust contrast */
+    width: 100%; /* Full width */
+    background-color: #fff; /* White background */
+    overflow: hidden; /* Hide overflow content */
+    position: absolute; /* Position absolutely */
+}
+
+/* Style for the bottom bar of the phone */
+.phone_bottom {
+    width: 100%; /* Full width */
+    height: 66px; /* Set height */
+    background: #000; /* Black background */
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center horizontally */
+    filter: blur(10px); /* Apply blur effect */
+}
+
+/* Hide input elements */
+input {
+    display: none;
+}
+
+/* Style for clickable labels */
+label {
+    cursor: pointer; /* Set cursor to pointer */
+    display: flex; /* Arrange items in a row */
+    z-index: 2; /* Set z-index */
+    width: 33%; /* Set width */
+    height: 66px; /* Set height */
+    position: relative; /* Position relatively */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Style for label images */
+label>img {
+    position: absolute; /* Position absolutely */
+    width: 25px; /* Set width */
+    top: 0; /* Position from top */
+    bottom: 0; /* Position from bottom */
+    margin: auto; /* Center vertically */
+    z-index: 3; /* Set z-index */
+    transition: 200ms 100ms cubic-bezier(0.14, -0.08, 0.74, 1.4); /* Transition effect */
+}
+
+/* Style for label pseudo elements */
+label::before {
+    content: ''; /* Add content */
+    position: absolute; /* Position absolutely */
+}
+
+/* Style for indicator */
+.indicator {
+    width: 70px; /* Set width */
+    height: 70px; /* Set height */
+    background-image: linear-gradient(0deg, #f7b0b0, rgba(183, 255, 154, 0)), linear-gradient(0deg, rgba(158, 255, 151, 0.75), rgba(183, 255, 154, 0)), linear-gradient(0deg, #b4fffb, rgba(183, 255, 154, 0)); /* Set background gradient */
+    background-position: cover; /* Cover background */
+    background-position: 0 10px; /* Adjust background position */
+    border-radius: 50%; /* Set border radius */
+    position: absolute; /* Position absolutely */
+    left: 0; /* Position from left */
+    top: -42px; /* Position from top */
+    right: 0; /* Position from right */
+    margin: auto; /* Center horizontally */
+    transition: 200ms cubic-bezier(0.14, -0.08, 0.74, 1.4); /* Transition effect */
+}
+
+/* Style for circle */
+.circle {
+    position: absolute; /* Position absolutely */
+    width: 60px; /* Set width */
+    height: 60px; /* Set height */
+    background: #000; /* Black background */
+    top: 152px; /* Position from top */
+    z-index: 1; /* Set z-index */
+    border-radius: 50%; /* Set border radius */
+    left: 0; /* Position from left */
+    right: 0; /* Position from right */
+    margin: auto; /* Center horizontally */
+    transition: 200ms cubic-bezier(0.14, -0.08, 0.74, 1.4); /* Transition effect */
+}
+
+/* CSS rules for different social checkboxes checked states */
+#social-1:checked~[for="social-1"]>img {
+    top: -85px; /* Move image upwards */
+}
+
+#social-1:checked~.circle,
+#social-1:checked~div div .indicator {
+    left: -66%; /* Move indicator and circle left */
+}
+
+#social-2:checked~[for="social-2"]>img {
+    top: -85px; /* Move image upwards */
+}
+
+#social-2:checked~.circle,
+#social-2:checked~div div .indicator {
+    left: 0; /* Reset indicator and circle position */
+}
+
+#social-3:checked~[for="social-3"]>img {
+    top: -85px; /* Move image upwards */
+}
+
+#social-3:checked~.circle,
+#social-3:checked~div div .indicator {
+    left: 66%; /* Move indicator and circle right */
+}
