@@ -4,8 +4,8 @@ This project features an animated tab bar developed by Aarzoo as part of the 100
 
 ## Preview
 
-<div style="display: flex; align-items: center; justify-content: center; width: 100%">
-    <img src="preview.gif" alt="preview GIF" width="100%" height="100%"/>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; border-radius: 0.6rem;">
+    <img src="preview.gif" alt="preview GIF" width="100%" height="100%" style="overflow: none; border-radius: inherit;"/>
 </div>
 
 This preview showcases the animated tab bar in action.
