@@ -11,9 +11,6 @@ During the 100 Days of Code challenge, I committed to coding for at least an hou
 You can explore the following folders to access individual projects and code samples:
 
 - [Day 1 : Animated Tab Bar](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%201%20%5D%20-%20Animated%20Tab%20Bar) : This project aims to craft an eye-catching tab interface enriched with dynamic animations, employing HTML and CSS for its implementation.
-- [Folder Name 2](link/to/folder2): Description of the second folder.
-- [Folder Name 3](link/to/folder3): Description of the third folder.
-- ...
 
 Feel free to dive into any folder to view the code and project details.
 
