@@ -1,0 +1,230 @@
+/* Define custom CSS variables for reuse */
+:root {
+    --bg: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    --green: rgb(129, 182, 255);
+    --transition-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Custom cubic-bezier easing function */
+}
+
+/* Apply box-sizing and reset margin and padding for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the body */
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* Hide overflow */
+    font-family: "Poppins", sans-serif;
+    /* Set font family */
+}
+
+/* Style the main container */
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg);
+    /* Use custom background variable */
+    /* Apply box-shadow */
+    box-shadow: inset 0 -6.6px 2.2px rgba(0, 0, 0, 0.025),
+        inset 0 -15.8px 5.3px rgba(0, 0, 0, 0.03),
+        inset 0 -29.8px 10px rgba(0, 0, 0, 0.035),
+        inset 0 -53.2px 17.9px rgba(0, 0, 0, 0.045),
+        inset 0 -99.4px 33.4px rgba(0, 0, 0, 0.05),
+        inset 0 -238px 80px rgba(0, 0, 0, 0.08);
+}
+
+/* Hide the checkbox input */
+input[type=checkbox] {
+    display: none;
+}
+
+/* Style the checkbox when checked */
+input[type=checkbox]:checked+label.checkbox .checkbox__inner .green__ball {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition-delay: 150ms;
+}
+
+/* Show the text when checkbox is checked */
+input[type=checkbox]:checked~.checkbox__text {
+    opacity: 1;
+}
+
+/* Animate the text options when checkbox is checked */
+input[type=checkbox]:checked~.checkbox__text .checkbox__text--options span.off {
+    transform: translateY(150%);
+    opacity: 0;
+}
+
+input[type=checkbox]:checked~.checkbox__text .checkbox__text--options span.on {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+/* Style the checkbox container */
+.checkbox {
+    --size: 80px;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--bg);
+    /* Use custom background variable */
+    /* Apply box-shadow */
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.12),
+        2px 2px 6px rgba(0, 0, 0, 0.05),
+        2px 2px 10px rgba(0, 0, 0, 0.025),
+        inset -2px -2px 3px rgba(0, 0, 0, 0.05),
+        inset -2px -2px 8px rgba(0, 0, 0, 0.02),
+        inset 1px 3px 3px rgba(255, 255, 255, 0.45),
+        inset 3px 8px 25px rgba(255, 255, 255, 0.35),
+        inset 3px 2px 3px rgba(255, 255, 255, 0.35),
+        inset 3px 2px 5px rgba(255, 255, 255, 0.2),
+        inset 2px 3px 8px rgba(255, 255, 255, 0.085),
+        inset 3px 2px 18px rgba(255, 255, 255, 0.05),
+        inset 2px 3px 25px rgba(255, 255, 255, 0.025),
+        inset 8px 8px 18px rgba(255, 255, 255, 0.1),
+        inset 8px 8px 25px rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+/* Style the inner part of the checkbox */
+.checkbox .checkbox__inner {
+    position: relative;
+    width: calc(var(--size) / 1.75);
+    height: calc(var(--size) / 1.75);
+    border-radius: 50%;
+    background: var(--bg);
+    /* Use custom background variable */
+    /* Apply box-shadow */
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.12),
+        inset 2px 2px 5px rgba(0, 0, 0, 0.08),
+        inset 3px 3px 12px rgba(0, 0, 0, 0.05),
+        inset 4px 5px 16px rgba(0, 0, 0, 0.035),
+        inset 0px -1px 2px rgba(255, 255, 255, 0.45),
+        inset -1px -1px 3px rgba(255, 255, 255, 0.45),
+        inset -1px -1px 2px rgba(255, 255, 255, 0.2),
+        inset -1px -1px 2px rgba(255, 255, 255, 0.12),
+        2px 2px 2px rgba(255, 255, 255, 0.12),
+        2px 2px 3px rgba(255, 255, 255, 0.1),
+        2px 2px 5px rgba(255, 255, 255, 0.08),
+        6px 6px 15px rgba(0, 0, 0, 0.014),
+        8px 8px 18px rgba(0, 0, 0, 0.08),
+        12px 12px 28px rgba(0, 0, 0, 0.04);
+}
+
+/* Style the green ball inside the checkbox */
+.checkbox .checkbox__inner .green__ball {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--green);
+    /* Use custom green color */
+    /* Apply box-shadow */
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12),
+        inset -4px -5px 12px rgba(0, 0, 0, 0.12),
+        inset -5px -6px 12px rgba(0, 0, 0, 0.08),
+        inset 0px -6px 18px rgba(0, 0, 0, 0.06),
+        2px 1px 8px rgba(112, 183, 255, 0.32),
+        3px 2px 12px rgba(112, 188, 255, 0.15),
+        4px 4px 18px rgba(112, 119, 255, 0.08);
+    /* Apply transitions */
+    transition: transform 250ms var(--transition-easing),
+        opacity 300ms var(--transition-easing);
+    transition-delay: 120ms;
+}
+
+/* Style the after pseudo-element of green ball */
+.checkbox .checkbox__inner .green__ball::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 35%;
+    height: 15%;
+    filter: blur(4px);
+}
+
+/* Style the text associated with the checkbox */
+.checkbox__text {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    color: transparent;
+    /* Initially transparent */
+    color: rgba(0, 0, 0, 0.611);
+    /* Semi-transparent black */
+    display: flex;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.5;
+    /* Initially semi-transparent */
+    transition: opacity 250ms var(--transition-easing);
+    /* Apply transition */
+    transition-delay: 150ms;
+}
+
+/* Style the options of the text associated with the checkbox */
+.checkbox__text--options {
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+/* Style the on and off options of the text */
+.checkbox__text--options span {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transition: transform 250ms var(--transition-easing),
+        opacity 150ms var(--transition-easing);
+    transition-delay: 150ms;
+}
+
+.checkbox__text--options span.off {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.checkbox__text--options span.on {
+    transform: translateY(-150%);
+    opacity: 0;
+}
+
+/* Style the support section */
+.support {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.support a {
+    margin: 0 10px;
+    color: #333333;
+    font-size: 1.8rem;
+    backface-visibility: hidden;
+    transition: all 150ms ease;
+}
+
+.support a:hover {
+    transform: scale3d(1.1);
+    /* Scale on hover */
+}

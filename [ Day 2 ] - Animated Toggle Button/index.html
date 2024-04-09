@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Specifying the rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconnect to Google Fonts with crossorigin attribute -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Linking the Poppins font styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Title of the document -->
+    <title>Animated Toggle Button</title>
+</head>
+
+<body>
+    <!-- Main section of the document -->
+    <main>
+        <!-- Checkbox input element -->
+        <input type="checkbox" id="i">
+
+        <!-- Label associated with the checkbox -->
+        <label for="i" class="checkbox">
+            <!-- Inner container for custom styling -->
+            <div class="checkbox__inner">
+                <!-- Green ball representing the toggle state -->
+                <div class="green__ball"></div>
+            </div>
+        </label>
+        <!-- Textual representation of the checkbox state -->
+        <div class="checkbox__text">
+            <!-- Static text indicating the state -->
+            <span>Turned</span>
+            <!-- Options for the checkbox state -->
+            <div class="checkbox__text--options">
+                <!-- Text for "off" state -->
+                <span class="off">off</span>
+                <!-- Text for "on" state -->
+                <span class="on">on</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Support section with social media link -->
+    <div class="support">
+        <!-- Twitter link -->
+        <a href="https://twitter.com/Aarzoo75" target="_blank"><i class="fab fa-twitter-square"></i></a>
+    </div>
+</body>
+
+</html>
