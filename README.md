@@ -13,6 +13,7 @@ You can explore the following folders to access individual projects and code sam
 - [Day 1 : Animated Tab Bar](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%201%20%5D%20-%20Animated%20Tab%20Bar) : This project aims to craft an eye-catching tab interface enriched with dynamic animations, employing HTML and CSS for its implementation.
 - [Day 2 : Animated Toggle Switch](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%202%20%5D%20-%20Animated%20Toggle%20Button) : In this project, I've implemented a custom checkbox toggle with associated text, utilizing HTML and CSS.
 - [Day 3 : Animated Radio Button](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%203%20%5D%20-%20Animated%20Radio%20Button) : This project showcases an animated radio button selection interface implemented using HTML and CSS.
+- [Day 4 : Animated 3D Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%204%20%5D%20-%20Animated%203D%20Loader) : The loader consists of a series of dots arranged in a circular pattern, with accompanying text indicating loading activity. The animation creates a visually appealing effect suitable for various web applications .
   
 Feel free to dive into any folder to view the code and project details.
 
