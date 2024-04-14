@@ -1,0 +1,141 @@
+/* Import Google Fonts - Poppins */
+@import url("https://fonts.googlesapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+/* CSS Styles */
+/* Reset default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #262433;
+}
+
+/* Navigation styling */
+.navigation {
+  position: relative;
+  width: 540px;
+  height: 120px;
+  background: #242433;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* List item styling */
+.navigation li {
+  position: relative;
+  list-style: none;
+  width: 80px;
+  margin: 0 5px;
+}
+
+/* List item dot styling */
+.navigation li::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: #222;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+/* Active list item dot styling */
+.navigation li.active::before {
+  background: #0f0;
+  box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0,
+    0 0 40px #0f0, 0 0 50px #0f0;
+}
+
+/* Anchor tag styling */
+.navigation li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+/* Icon styling */
+.navigation li a .icon {
+  position: absolute;
+  font-size: 1.75em;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  border-radius: 50px;
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+/* Active icon styling */
+.navigation li.active a .icon {
+  background: #29fd53;
+  color: #fff;
+  transform: translateY(-55px);
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  transition-delay: 0s;
+}
+
+/* Icon inner circle styling */
+.navigation li a .icon::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  background: #2f363e;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+/* Active icon inner circle styling */
+.navigation li.active a .icon::before {
+  transform: scale(1);
+}
+
+/* Text styling */
+.navigation li a .text {
+  position: absolute;
+  font-size: 0.75em;
+  color: #2f363e;
+  opacity: 0;
+  transform: translateY(20px);
+  padding: 2px 10px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+/* Active text styling */
+.navigation li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+  transition-delay: 0.2s;
+}
