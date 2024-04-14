@@ -15,6 +15,7 @@ You can explore the following folders to access individual projects and code sam
 - [Day 3 : Animated Radio Button](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%203%20%5D%20-%20Animated%20Radio%20Button) : This project showcases an animated radio button selection interface implemented using HTML and CSS.
 - [Day 4 : Animated 3D Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%204%20%5D%20-%20Animated%203D%20Loader) : The loader consists of a series of dots arranged in a circular pattern, with accompanying text indicating loading activity. The animation creates a visually appealing effect suitable for various web applications .
 - [Day 5 : Hand Scanning Animation](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%205%20%5D%20-%20Hand%20Scanning%20Animation) : The hand scanning animation project is a simple yet visually appealing demonstration of CSS animations. It creates an illusion of a hand-scanning process with lines moving up and down, representing the progress of the scan.
+- [Day 6 : Animated Navigation Tab Menu](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%206%20%5D%20-%20Animated%20Navigation%20Tab%20Menu) : This project features an animated navigation tab menu built with HTML, CSS, and JavaScript. It provides an interactive and visually appealing way to navigate through different sections of a web application or website.
   
 Feel free to dive into any folder to view the code and project details.
 
