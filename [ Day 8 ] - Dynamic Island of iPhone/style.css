@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Resetting default styles */
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Styling the body */
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #fff;
+}
+
+/* Styling the container box */
+.box
+{
+	position: relative;
+	width: 300px;
+	height: 600px;
+	background: #fff;
+	border-radius: 50px;
+	background: #666;
+}
+
+/* Styling the pseudo-element before the box */
+.box::before 
+{
+	content: '';
+	position: absolute;
+	inset: 3px;
+	background: #000;
+	border-radius: 48px;
+}
+
+/* Styling the inner container */
+.inner 
+{
+	position: absolute;
+	inset: 3px;
+	background: url(bg.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: 48px;
+	border: 10px solid #000;
+	display: flex;
+	justify-content: center;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+/* Revealing inner container on hover */
+.box:hover .inner 
+{
+	opacity: 1;
+}
+
+/* Styling navigation buttons */
+.btn 
+{
+	position: absolute;
+	width: 3px;
+	left: -2px;
+	top: 110px;
+	height: 26px;
+	background: #444;
+	background: radial-gradient(#ccc,#666,#222);
+	z-index: 10;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.btn.btn2
+{
+	top: 160px;
+	height: 40px;
+}
+.btn.btn3
+{
+	top: 220px;
+	height: 40px;
+}
+
+/* Styling the right side element */
+.rightSide
+{
+	position: absolute;
+	width: 3px;
+	right: -2px;
+	top: 170px;
+	height: 70px;
+	background: #444;
+	background: radial-gradient(#ccc,#666,#222);
+	z-index: 10;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+/* Styling the island popup */
+.island_popup 
+{
+	position: absolute;
+	top: 10px;
+	width: 90px;
+	height: 25px;
+	background: #000;
+	border-radius: 20px;
+	transition: 0.5s ease-in-out;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* width: 200px; */
+}
+
+/* Expanding island popup on hover */
+.island_popup:hover 
+{
+	width: 200px;
+	height: 25px;
+	border-radius: 50px;
+}
+
+/* Styling active island popup */
+.island_popup.active
+{
+	width: 250px;
+	height: 60px;
+	border-radius: 50px;
+} 
+
+/* Styling content within island popup */
+.content 
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 10px;
+	line-height: 25px;
+}
+
+/* Styling paragraph within content */
+.content p 
+{
+	color: #fff;
+	font-size: 0.65em;
+	visibility: hidden;
+	opacity: 0;
+	cursor: default;
+	transition: 0.5s;
+}
+
+/* Styling action section */
+.action 
+{
+	position: relative;
+	top: 5px;
+	gap: 12px;
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+/* Adjusting action section for active island popup */
+.island_popup.active .action
+{
+	top: 12px;
+}
+
+/* Styling red icon */
+ion-icon.red
+{
+	color: #fd443b;
+	transform: rotate(135deg); 
+	cursor: pointer; 
+	transition: 0.5s;
+}
+
+/* Styling green icon */
+ion-icon.green
+{
+	color: #31d059;
+	cursor: pointer;
+	transition: 0.5s;    
+}
+
+/* Revealing hidden elements on hover or when island popup is active */
+.island_popup:hover p,
+.island_popup:hover .action,
+.island_popup.active p,
+.island_popup.active .action
+{
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+	transition-delay: 0.25s;
+}
+
+/* Styling red icon within active island popup */
+.island_popup.active ion-icon.red
+{
+	background: #fd443b;
+	color: #fff;
+	border-radius: 50%;
+	box-shadow:0 0 0 8px #fd443b;
+	margin-right: 12px;
+}
+
+/* Styling green icon within active island popup */
+.island_popup.active ion-icon.green
+{
+	background: #31d059;
+	color: #fff;
+	border-radius: 50%;
+	box-shadow:0 0 0 8px #31d059;
+	margin-right: 8px;
+}
+
+/* Styling details section */
+.details 
+{
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+/* Styling image box */
+.imgBx 
+{
+	width: 0px;
+	height: 0px;
+	background: #fff;
+	transition: 0.5s;
+	border-radius: 50%;
+	scale: 0;
+	overflow: hidden;
+}
+
+/* Styling image within image box */
+.imgBx img 
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Adjusting image box for active island popup */
+.island_popup.active .imgBx 
+{
+	width: 40px;
+	height: 40px;
+	scale: 1;
+	margin-right: 8px;
+}
