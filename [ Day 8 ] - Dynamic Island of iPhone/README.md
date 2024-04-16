@@ -1,4 +1,4 @@
-**Project Title: Dynamic Island of iPhone**
+# Dynamic Island of iPhone
 
 Welcome to the Island Popup project, part of Day 8 of the #100DaysOfCode Challenge! This project aims to create an interactive island popup using HTML, CSS, and JavaScript. Below, you'll find information on how to get started with the project, where to download the full source code, and how to get in touch with the creator.
 
