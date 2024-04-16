@@ -17,6 +17,7 @@ You can explore the following folders to access individual projects and code sam
 - [Day 5 : Hand Scanning Animation](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%205%20%5D%20-%20Hand%20Scanning%20Animation) : The hand scanning animation project is a simple yet visually appealing demonstration of CSS animations. It creates an illusion of a hand-scanning process with lines moving up and down, representing the progress of the scan.
 - [Day 6 : Animated Navigation Tab Menu](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%206%20%5D%20-%20Animated%20Navigation%20Tab%20Menu) : This project features an animated navigation tab menu built with HTML, CSS, and JavaScript. It provides an interactive and visually appealing way to navigate through different sections of a web application or website.
 - [Day 7 : Animated Rocket Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%207%20%5D%20-%20Animated%20Rocket%20Loader) : The Animated Rocket Loader project showcases a visually appealing loader animation consisting of a rocket surrounded by clouds. The rocket spins while the clouds move dynamically, providing an engaging loading experience for users.
+- [Day 8 : Dynamic Island of iPhone](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%208%20%5D%20-%20Dynamic%20Island%20of%20iPhone) : This project aims to create an interactive island popup using HTML, CSS, and JavaScript.
   
 Feel free to dive into any folder to view the code and project details.
 
