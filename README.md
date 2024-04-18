@@ -19,6 +19,7 @@ You can explore the following folders to access individual projects and code sam
 - [Day 7 : Animated Rocket Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%207%20%5D%20-%20Animated%20Rocket%20Loader) : The Animated Rocket Loader project showcases a visually appealing loader animation consisting of a rocket surrounded by clouds. The rocket spins while the clouds move dynamically, providing an engaging loading experience for users.
 - [Day 8 : Dynamic Island of iPhone](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%208%20%5D%20-%20Dynamic%20Island%20of%20iPhone) : This project aims to create an interactive island popup using HTML, CSS, and JavaScript.
 - [Day 9 : Animated Cute Puppy](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%209%20%5D%20-%20Animated%20Cute%20Puppy) : This project showcases an animated cute puppy created using HTML and CSS. The animation includes various elements such as blinking eyes, wagging tail, and moving ears to bring the puppy to life.
+- [Day 10 : Animated Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2010%20%5D%20-%20Animated%20Loader) : The Animated Loader utilizes SVG elements and CSS animations to create an eye-catching loading animation. It consists of a circular ring with a worm-like shape moving along its path. The animation is smooth and captivating, making it suitable for various web applications and projects.
   
 Feel free to dive into any folder to view the code and project details.
 
