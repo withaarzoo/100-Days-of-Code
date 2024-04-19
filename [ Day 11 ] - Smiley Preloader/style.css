@@ -1,0 +1,202 @@
+/* Resetting default styles for all elements */
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Defining root variables for hue, background color, foreground color, and transition duration */
+:root {
+    --hue: 223;
+    /* Default hue value */
+    --bg: hsl(var(--hue), 90%, 90%);
+    /* Background color derived from hue */
+    --fg: hsl(var(--hue), 90%, 10%);
+    /* Foreground color derived from hue */
+    --trans-dur: 0.3s;
+    /* Transition duration */
+    /* Responsive font size calculation */
+    font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
+/* Styling for the body */
+body {
+    background-color: var(--bg);
+    /* Background color */
+    color: var(--fg);
+    /* Foreground color */
+    font: 1em/1.5 sans-serif;
+    /* Font settings */
+    height: 100vh;
+    /* Full height */
+    display: grid;
+    /* Grid layout */
+    place-items: center;
+    /* Center alignment */
+    transition: background-color var(--trans-dur), color var(--trans-dur);
+    /* Transition effect for color changes */
+}
+
+/* Styling for the smiley SVG element */
+.smiley {
+    width: 8em;
+    /* Width */
+    height: 8em;
+    /* Height */
+}
+
+/* Animation for eyes */
+.smiley__eye1,
+.smiley__eye2,
+.smiley__mouth1,
+.smiley__mouth2 {
+    animation: eye1 3s ease-in-out infinite;
+    /* Eye animation */
+}
+
+/* Eye styles */
+.smiley__eye1,
+.smiley__eye2 {
+    transform-origin: 64px 64px;
+    /* Transform origin */
+}
+
+/* Second eye animation */
+.smiley__eye2 {
+    animation-name: eye2;
+}
+
+/* First mouth animation */
+.smiley__mouth1 {
+    animation-name: mouth1;
+}
+
+/* Second mouth animation */
+.smiley__mouth2 {
+    animation-name: mouth2;
+    visibility: hidden;
+    /* Initially hidden */
+}
+
+/* Dark theme media query */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: hsl(var(--hue), 90%, 10%);
+        /* Dark background color */
+        --fg: hsl(var(--hue), 90%, 90%);
+        /* Dark foreground color */
+    }
+}
+
+/* Eye animations */
+@keyframes eye1 {
+    from {
+        transform: rotate(-260deg) translate(0, -56px);
+        /* Initial position */
+    }
+
+    50%,
+    60% {
+        animation-timing-function: cubic-bezier(0.17, 0, 0.58, 1);
+        /* Timing function */
+        transform: rotate(-40deg) translate(0, -56px) scale(1);
+        /* Intermediate position */
+    }
+
+    to {
+        transform: rotate(225deg) translate(0, -56px) scale(0.35);
+        /* Final position */
+    }
+}
+
+@keyframes eye2 {
+    from {
+        transform: rotate(-260deg) translate(0, -56px);
+        /* Initial position */
+    }
+
+    50% {
+        transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+        /* Intermediate position */
+    }
+
+    52.5% {
+        transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1, 0);
+        /* Intermediate position */
+    }
+
+    55%,
+    70% {
+        animation-timing-function: cubic-bezier(0, 0, 0.28, 1);
+        /* Timing function */
+        transform: rotate(40deg) translate(0, -56px) rotate(-40deg) scale(1);
+        /* Intermediate position */
+    }
+
+    to {
+        transform: rotate(150deg) translate(0, -56px) scale(0.4);
+        /* Final position */
+    }
+}
+
+/* Mouth animations */
+@keyframes mouth1 {
+    from {
+        animation-timing-function: ease-in;
+        /* Timing function */
+        stroke-dasharray: 0 351.86;
+        /* Initial stroke dash array */
+        stroke-dashoffset: 0;
+        /* Initial stroke dash offset */
+    }
+
+    25% {
+        animation-timing-function: ease-out;
+        /* Timing function */
+        stroke-dasharray: 175.93 351.86;
+        /* Intermediate stroke dash array */
+        stroke-dashoffset: 0;
+        /* Intermediate stroke dash offset */
+    }
+
+    50% {
+        animation-timing-function: steps(1, start);
+        /* Timing function */
+        stroke-dasharray: 175.93 351.86;
+        /* Final stroke dash array */
+        stroke-dashoffset: -175.93;
+        /* Final stroke dash offset */
+        visibility: visible;
+        /* Make visible */
+    }
+
+    75%,
+    to {
+        visibility: hidden;
+        /* Hidden */
+    }
+}
+
+@keyframes mouth2 {
+    from {
+        animation-timing-function: steps(1, end);
+        /* Timing function */
+        visibility: hidden;
+        /* Hidden */
+    }
+
+    50% {
+        animation-timing-function: ease-in-out;
+        /* Timing function */
+        visibility: visible;
+        /* Make visible */
+        stroke-dashoffset: 0;
+        /* Final stroke dash offset */
+    }
+
+    to {
+        stroke-dashoffset: -351.86;
+        /* Initial stroke dash offset */
+    }
+}
