@@ -22,6 +22,7 @@ You can explore the following folders to access individual projects and code sam
 - [Day 10 : Animated Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2010%20%5D%20-%20Animated%20Loader) : The Animated Loader utilizes SVG elements and CSS animations to create an eye-catching loading animation. It consists of a circular ring with a worm-like shape moving along its path. The animation is smooth and captivating, making it suitable for various web applications and projects.
 - [Day 11 : Smiley Preloader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2011%20%5D%20-%20Smiley%20Preloader) : It features a smiley preloader animation created using SVG and CSS animations.
 - [Day 12 : Animated Eevee Pokemon](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2012%20%5D%20-%20Animated%20Eevee%20Pokemon) : The animation includes various elements such as blinking eyes, wagging tail, and moving ears to bring the eevee to life.
+- [Day 13 : Animated Cat Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2013%20%5D%20-%20Animated%20Cat%20Loader) : This is a simple HTML and CSS code snippet that creates an animated cat loader. The loader features a playful animation of a cat formed by various segments. Each segment is given a distinct gradient effect, resulting in a visually appealing and engaging loader animation.
   
 Feel free to dive into any folder to view the code and project details.
 
