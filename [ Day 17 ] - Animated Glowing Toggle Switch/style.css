@@ -1,0 +1,110 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background color for the body */
+body {
+    background-color: rgb(1, 1, 41);
+}
+
+/* Style for the container */
+.container {
+    /* Position the container in the center of the viewport */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Set dimensions for the container */
+    height: 25em;
+    width: 25em;
+}
+
+/* Style for the checkbox input */
+input[type="checkbox"] {
+    /* Remove default appearance */
+    appearance: none;
+    /* Position the checkbox */
+    position: absolute;
+    top: 6.25em;
+    left: 50%;
+    transform: translate(-50%);
+    /* Set dimensions and shape for the checkbox */
+    height: 9.37em;
+    width: 18.75em;
+    border-radius: 4.68em;
+    /* Set background color for the checkbox */
+    background-color: #220c6f;
+}
+
+/* Style for the inner circle of the checkbox */
+input[type="checkbox"]::before {
+    /* Position the inner circle */
+    position: absolute;
+    top: 0.68em;
+    left: 0.68em;
+    content: "";
+    /* Set dimensions and shape for the inner circle */
+    height: 8.12em;
+    width: 8.12em;
+    border-radius: 50%;
+    /* Set background color for the inner circle */
+    background-color: #6243dc;
+    /* Add transition effect */
+    transition: 0.3s;
+}
+
+/* Style for the label representing the light */
+label[for="light"] {
+    /* Position the label */
+    position: absolute;
+    top: 11em;
+    left: 8em;
+    /* Ensure the label is behind the checkbox */
+    z-index: -1;
+    /* Set dimensions for the label */
+    height: 6.25em;
+    width: 0.62em;
+    /* Set background color for the label */
+    background-color: rgb(111, 110, 110);
+    /* Add transition effect */
+    transition: 0.3s;
+}
+
+/* Style for the light beam of the label */
+label[for="light"]::after {
+    /* Position the light beam */
+    position: absolute;
+    top: 5.93em;
+    left: -0.68em;
+    content: "";
+    /* Set dimensions and shape for the light beam */
+    height: 0;
+    width: 0.75em;
+    border-bottom: 1.56em solid #1f068f;
+    border-left: 0.62em solid transparent;
+    border-right: 0.62em solid transparent;
+}
+
+/* Cursor style for the checkbox and label */
+input[type="checkbox"],
+label[for="light"] {
+    cursor: pointer;
+}
+
+/* Style for the inner circle of the checkbox when checked */
+input[type="checkbox"]:checked::before {
+    /* Move the inner circle to the right and change its color */
+    position: absolute;
+    left: 10.1em;
+    background-color: #f5f5f5;
+    /* Add box-shadow effect */
+    box-shadow: 0 0 8.75em 1.87em rgba(196, 241, 255, 0.8);
+}
+
+/* Adjust position of label when checkbox is checked */
+input[type="checkbox"]:checked+label {
+    top: 12em;
+}
