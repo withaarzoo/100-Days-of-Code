@@ -176,7 +176,7 @@ body {
     border-radius: 50px 50px 50px 5px;
     animation: bubble-scale 2s infinite;
     /* Apply animation to make the bubble scale */
-}write blog article about this project. write step by step process with step by step code.
+}
 
 /* Keyframes for bubble scaling animation */
 @keyframes bubble-scale {
