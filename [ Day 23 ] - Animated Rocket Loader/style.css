@@ -1,0 +1,370 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i");
+
+/* Resetting default margin, padding, and box-sizing */
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+/* Set base font size */
+html {
+    font-size: 10px;
+}
+
+/* Body styles */
+body {
+    font-family: "Ubuntu", sans-serif;
+    color: #6e6e6e;
+    font-size: 1.6rem;
+}
+
+/* Ensure header and footer are displayed as block elements */
+header,
+footer {
+    display: block;
+}
+
+/* Link styles */
+a,
+a:link,
+a:visited {
+    color: #4d4d4d;
+    text-decoration: none;
+}
+
+/* Image styles */
+img {
+    border: 0;
+}
+
+/* Remove default list styles */
+ul {
+    list-style: none;
+}
+
+/* Centering container */
+.center {
+    margin: auto;
+    width: 110rem;
+}
+
+/* Styles for the rocket loader */
+.rocket-loader {
+    /* Animation for moving particles */
+    -webkit-animation: moveParticles 6s linear infinite;
+    animation: moveParticles 6s linear infinite;
+    /* Background gradients */
+    background: linear-gradient(90deg, gray, transparent 10%) 0 20%/180% 0.2rem repeat-x, linear-gradient(90deg, gray, transparent 20%) 0 80%/150% 0.2rem repeat-x, linear-gradient(90deg, gray, transparent 5%) 0 65%/100% 0.2rem repeat-x, linear-gradient(90deg, gray, transparent 5%) 0 40%/220% 0.2rem repeat-x, linear-gradient(0, white, white);
+    /* Border and shadow */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: inset 0 0 60px 0 rgba(0, 0, 0, 0.1);
+    /* Size and positioning */
+    height: 125px;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 125px;
+}
+
+/* Content before the rocket loader */
+.rocket-loader::before {
+    /* Blink animation */
+    -webkit-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+    bottom: 6%;
+    content: "Loading..."; /* Text content */
+    font-size: 12px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+/* Keyframes for moving particles animation */
+@-webkit-keyframes moveParticles {
+    100% {
+        background-position-x: -500rem;
+    }
+}
+
+@keyframes moveParticles {
+    100% {
+        background-position-x: -500rem;
+    }
+}
+
+/* Styles for the rocket */
+.rocket {
+    /* Animation for moving rocket */
+    -webkit-animation: moveRocket 2s linear infinite;
+    animation: moveRocket 2s linear infinite;
+    /* Background gradient */
+    background: lightgray;
+    background: linear-gradient(#990000, red, #990000);
+    /* Border and positioning */
+    border-left: 3px solid rgba(0, 0, 0, 0.4);
+    border-radius: 50%/30%;
+    height: 15%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+}
+
+/* Pseudo-elements for rocket */
+.rocket::before,
+.rocket::after {
+    content: "";
+    position: absolute;
+}
+
+/* Pseudo-element before rocket */
+.rocket::before {
+    /* Animation for rotating fins */
+    -webkit-animation: rotateFins 1s infinite;
+    animation: rotateFins 1s infinite;
+    /* Background gradient */
+    background: #bababa;
+    background: linear-gradient(#990000, red, #990000);
+    /* Border and positioning */
+    border: 2px solid transparent;
+    border-radius: 0 50% 50% 0;
+    height: 140%;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 6px;
+    width: 20%;
+}
+
+/* Pseudo-element after rocket */
+.rocket::after {
+    /* Border styles */
+    border: 7px solid transparent;
+    border-left: 14px solid rgba(0, 0, 0, 0.4);
+    border-radius: 15%;
+    /* Positioning */
+    right: -16px;
+    top: 2px;
+}
+
+/* Styles for rocket extras */
+.rocket-extras {
+    /* Animation for moving extras */
+    -webkit-animation: moveExtras 1s infinite;
+    animation: moveExtras 1s infinite;
+    /* Background and size */
+    background: rgba(0, 0, 0, 0.4);
+    height: 2px;
+    left: 12px;
+    margin: -2px 0 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 10px;
+}
+
+/* Pseudo-elements for rocket extras */
+.rocket-extras::before,
+.rocket-extras::after {
+    content: "";
+    position: absolute;
+}
+
+/* Pseudo-element before rocket extras */
+.rocket-extras::before {
+    /* Background */
+    background: white;
+    /* Border and positioning */
+    border-radius: 50%;
+    height: 5px;
+    right: -7px;
+    top: -1px;
+    width: 5px;
+}
+
+/* Pseudo-element after rocket extras */
+.rocket-extras::after {
+    /* Background and border */
+    background: #cc0000;
+    border-top: 1px solid #660000;
+    /* Positioning */
+    height: 1px;
+    left: -10px;
+    top: 1px;
+    width: 6px;
+}
+
+/* Keyframes for moving rocket animation */
+@-webkit-keyframes moveRocket {
+
+    0%,
+    100% {
+        transform: translate(-50%, calc(-50% - 1rem));
+    }
+
+    50% {
+        transform: translate(-50%, calc(-50% + 1rem));
+    }
+}
+
+@keyframes moveRocket {
+
+    0%,
+    100% {
+        transform: translate(-50%, calc(-50% - 1rem));
+    }
+
+    50% {
+        transform: translate(-50%, calc(-50% + 1rem));
+    }
+}
+
+/* Keyframes for rotating fins animation */
+@-webkit-keyframes rotateFins {
+
+    0%,
+    100% {
+        height: 140%;
+    }
+
+    50% {
+        border-top: 2px solid #660000;
+        border-bottom: 2px solid #660000;
+        height: 110%;
+    }
+}
+
+@keyframes rotateFins {
+
+    0%,
+    100% {
+        height: 140%;
+    }
+
+    50% {
+        border-top: 2px solid #660000;
+        border-bottom: 2px solid #660000;
+        height: 110%;
+    }
+}
+
+/* Keyframes for moving extras animation */
+@-webkit-keyframes moveExtras {
+
+    0%,
+    100% {
+        transform: translate(0, calc(-50% + 0.1rem));
+    }
+
+    50% {
+        transform: translate(0, calc(-50% - 0.1rem));
+    }
+}
+
+@keyframes moveExtras {
+
+    0%,
+    100% {
+        transform: translate(0, calc(-50% + 0.1rem));
+    }
+
+    50% {
+        transform: translate(0, calc(-50% - 0.1rem));
+    }
+}
+
+/* Styles for the jet */
+.jet {
+    /* Size and positioning */
+    height: 10px;
+    left: -10px;
+    position: absolute;
+    top: calc(50% - 5px);
+    width: 10px;
+}
+
+/* Pseudo-elements and span for the jet */
+.jet::before,
+.jet::after,
+.jet span {
+    /* Animation for moving smoke */
+    -webkit-animation: moveSmoke 0.3s infinite;
+    animation: moveSmoke 0.3s infinite;
+    /* Background, size, and positioning */
+    background: #e09100;
+    border-radius: 50%;
+    content: "";
+    filter: blur(2px);
+    height: 8px;
+    left: -6px;
+    opacity: 1;
+    position: absolute;
+    transform: translate(0, 0) scale(1);
+    top: 1px;
+    width: 15px;
+}
+
+/* Pseudo-element after jet */
+.jet::after {
+    /* Animation delay */
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+/* Span within jet */
+.jet span {
+    /* Animation delay */
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+/* Keyframes for moving smoke animation */
+@-webkit-keyframes moveSmoke {
+    100% {
+        filter: blur(3px);
+        opacity: 0;
+        transform: translate(-40px, 0) scale(2);
+    }
+}
+
+@keyframes moveSmoke {
+    100% {
+        filter: blur(3px);
+        opacity: 0;
+        transform: translate(-40px, 0) scale(2);
+    }
+}
+
+/* Keyframes for blinking animation */
+@-webkit-keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
