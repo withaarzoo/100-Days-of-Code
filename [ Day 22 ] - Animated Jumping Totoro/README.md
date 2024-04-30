@@ -10,7 +10,7 @@ This is a simple HTML and CSS project that creates an animated jumping Totoro ch
     <img src="preview.gif" alt="preview GIF" width="100%" height="100%" style="overflow: none; border-radius: inherit;"/>
 </div>
 
-This preview showcases the animated totoro in action.
+This preview showcases the animated jumping totoro in action.
 
 ## Download Full Source Code
 
@@ -42,8 +42,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any inquiries or assistance regarding this project, feel free to reach out to the developer, Aarzoo, via [Bento](https://bento.me/withaarzoo).
 
-Enjoy coding and have fun with your animated totoro 🐶✨
+Enjoy coding and have fun with your animated jumping totoro 🐶✨
 
 ---
 
-Enjoy using the animated totoro! If you have any questions or suggestions, please feel free to reach out.
+Enjoy using the animated jumping totoro! If you have any questions or suggestions, please feel free to reach out.
