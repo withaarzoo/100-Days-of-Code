@@ -10,7 +10,7 @@ This is a simple menu with hover reveal effects using HTML and CSS. When you hov
     <img src="preview.gif" alt="preview GIF" width="100%" height="100%" style="overflow: none; border-radius: inherit;"/>
 </div>
 
-This preview showcases the animated rocket loader in action.
+This preview showcases the menu bar with hover reveal effect in action.
 
 ## Download Full Source Code
 
@@ -68,8 +68,8 @@ This code snippet has been crafted by [Aarzoo](https://twitter.com/withaarzoo).
 
 For any inquiries or assistance regarding this project, feel free to reach out to the developer, Aarzoo, via [Bento](https://bento.me/withaarzoo).
 
-Enjoy coding and have fun with your animated rocket loader 🚀✨
+Enjoy coding and have fun with your menu bar with hover reveal effect 🚀✨
 
 ---
 
-Enjoy using the animated rocket loader! If you have any questions or suggestions, please feel free to reach out.
+Enjoy using the menu bar with hover reveal effect! If you have any questions or suggestions, please feel free to reach out.
