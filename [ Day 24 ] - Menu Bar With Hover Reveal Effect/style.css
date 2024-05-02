@@ -1,0 +1,167 @@
+/* Importing Inter font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* Global box-sizing reset */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: "Inter", sans-serif;
+    /* Setting font family */
+    line-height: 1.5;
+    /* Setting line height */
+    min-height: 100vh;
+    /* Ensuring full viewport height */
+    display: flex;
+    /* Flex container */
+    align-items: center;
+    /* Centering items vertically */
+    justify-content: center;
+    /* Centering items horizontally */
+    background-color: #eee;
+    /* Background color */
+}
+
+/* Styles for the custom menu container */
+.custom-menu {
+    padding: 2rem;
+    /* Padding */
+    background-color: #fff;
+    /* Background color */
+    position: relative;
+    /* Position relative for absolute positioning */
+    width: calc(130px + 4 * 70px + 4rem);
+    /* Calculated width */
+    display: flex;
+    /* Flex container */
+    justify-content: center;
+    /* Centering items horizontally */
+    border-radius: 20px;
+    /* Border radius */
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.075);
+    /* Box shadow */
+}
+
+/* Styles for custom links */
+.custom-link {
+    display: inline-flex;
+    /* Inline flex container */
+    justify-content: center;
+    /* Centering items horizontally */
+    align-items: center;
+    /* Centering items vertically */
+    width: 70px;
+    /* Width */
+    height: 50px;
+    /* Height */
+    border-radius: 99em;
+    /* Border radius */
+    position: relative;
+    /* Position relative for absolute positioning */
+    z-index: 1;
+    /* Z-index */
+    overflow: hidden;
+    /* Hiding overflow */
+    transform-origin: center left;
+    /* Transform origin */
+    transition: width 0.2s ease-in;
+    /* Transition for width */
+    text-decoration: none;
+    /* Removing underline */
+    color: inherit;
+    /* Inheriting text color */
+}
+
+/* Styles for pseudo-element before */
+.custom-link:before {
+    position: absolute;
+    /* Position absolute for absolute positioning */
+    z-index: -1;
+    /* Behind the link */
+    content: "";
+    /* Empty content */
+    display: block;
+    /* Block element */
+    border-radius: 99em;
+    /* Border radius */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    top: 0;
+    /* Position from top */
+    transform: translateX(100%);
+    /* Initial position */
+    transition: transform 0.2s ease-in;
+    /* Transition */
+    transform-origin: center right;
+    /* Transform origin */
+    background-color: #eee;
+    /* Background color */
+}
+
+/* Hover and focus styles for custom links */
+.custom-link:hover,
+.custom-link:focus {
+    outline: 0;
+    /* Removing outline */
+    width: 130px;
+    /* Increasing width on hover/focus */
+}
+
+/* Hover and focus styles for pseudo-element before and link title */
+.custom-link:hover:before,
+.custom-link:hover .custom-link-title,
+.custom-link:focus:before,
+.custom-link:focus .custom-link-title {
+    transform: translateX(0);
+    /* Moving element to the left */
+    opacity: 1;
+    /* Full opacity */
+}
+
+/* Styles for link icon */
+.custom-link-icon {
+    width: 28px;
+    /* Width */
+    height: 28px;
+    /* Height */
+    display: block;
+    /* Block element */
+    flex-shrink: 0;
+    /* Not shrinking */
+    left: 18px;
+    /* Position from left */
+    position: absolute;
+    /* Position absolute for absolute positioning */
+}
+
+/* Styles for SVG icon inside link */
+.custom-link-icon svg {
+    width: 28px;
+    /* Width */
+    height: 28px;
+    /* Height */
+}
+
+/* Styles for link title */
+.custom-link-title {
+    transform: translateX(100%);
+    /* Initial position */
+    transition: transform 0.2s ease-in;
+    /* Transition */
+    transform-origin: center right;
+    /* Transform origin */
+    display: block;
+    /* Block element */
+    text-align: center;
+    /* Centering text horizontally */
+    text-indent: 28px;
+    /* Indentation for text */
+    width: 100%;
+    /* Full width */
+}
