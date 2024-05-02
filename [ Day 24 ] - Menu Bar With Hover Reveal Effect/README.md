@@ -20,7 +20,7 @@ You can download the full source code for this project from the following link: 
 
 To use this menu in your project, follow these steps:
 
-1. Download the HTML and CSS files from the [dgicode.store](https://dgicode.store/product/menu-with-hover-reveal-using-html-and-css/) website .
+1. Download the HTML and CSS files from the [telegram](https://t.me/CodeWithAarzoo) .
 
 2. Include the HTML and CSS files in your project's directory.
 
