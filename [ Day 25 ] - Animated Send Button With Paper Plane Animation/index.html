@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Define character encoding and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Title of the webpage -->
+    <title>Animated Send Button With Paper Plane Animation</title>
+</head>
+
+<body>
+    <!-- Button element -->
+    <button class="button">
+        <!-- Default button text -->
+        <span class="default">Send Now</span>
+        <!-- Success button text with SVG icon -->
+        <span class="success">
+            <svg viewBox="0 0 16 16">
+                <polyline points="3.75 9 7 12 13 5"></polyline>
+            </svg>Sent
+        </span>
+        <!-- SVG for animation trails -->
+        <svg class="trails" viewBox="0 0 33 64">
+            <!-- Path for animation trails -->
+            <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
+            <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
+        </svg>
+        <!-- Paper plane animation div -->
+        <div class="plane">
+            <!-- Left wing of the paper plane -->
+            <div class="left"></div>
+            <!-- Right wing of the paper plane -->
+            <div class="right"></div>
+        </div>
+    </button>
+</body>
+
+<!-- Link to external JavaScript files -->
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</html>
