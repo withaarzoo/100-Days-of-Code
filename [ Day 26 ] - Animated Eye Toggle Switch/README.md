@@ -24,7 +24,7 @@ You can download the full source code for this project from the following link: 
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/animated-eye-toggle.git`
+1. Clone the repository: `git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2026%20%5D%20-%20Animated%20Eye%20Toggle%20Switch.git`
 2. Open `index.html` in your web browser
 
 ## Usage
