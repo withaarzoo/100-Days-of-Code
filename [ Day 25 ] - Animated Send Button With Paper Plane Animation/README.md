@@ -41,7 +41,7 @@ To use this animated paper plane button in your project, follow these steps:
    Clone this repository to your local machine using Git:
 
    ```shell
-   git clone https://github.com/your-username/animated-paper-plane-button.git
+   git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2025%20%5D%20-%20Animated%20Send%20Button%20With%20Paper%20Plane%20Animation.git
    ```
 
 2. **Include the Files**:
