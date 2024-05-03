@@ -1,0 +1,288 @@
+/* Define CSS variables for size and colors */
+:root {
+    --sz: 10vmin;
+    /* size */
+    --on: #269fe5;
+    /* color on */
+    --of: #616774;
+    /* color off */
+    --tr: all 0.25s ease 0s;
+    /* transition */
+}
+
+/* Apply box-sizing and transition to all elements */
+* {
+    box-sizing: border-box;
+    transition: var(--tr);
+}
+
+/* Style the body to center the content */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #101010, #393939);
+}
+
+/* Style the main content container */
+.content {
+    position: relative;
+    width: calc(var(--sz) * 4);
+    height: calc(var(--sz) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide the checkbox input */
+input {
+    display: none;
+}
+
+/* Style the label associated with the checkbox */
+label[for="btn"] {
+    position: absolute;
+    width: calc(var(--sz) * 4);
+    height: calc(var(--sz) * 2);
+    background: var(--of);
+    border-radius: var(--sz);
+    box-shadow: 0 0 calc(var(--sz) / 50) calc(var(--sz) / 50) #0006,
+        0 -4px calc(var(--sz) / 10) calc(var(--sz) / 500) #000d,
+        0 0px calc(var(--sz) / 10) calc(var(--sz) / 50) #fff8,
+        0 -4px calc(var(--sz) / 5) calc(var(--sz) / 50) #000c;
+}
+
+/* Style the track element */
+.track {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--sz);
+    overflow: hidden;
+}
+
+/* Add a gradient background to the track element */
+.track:before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    left: -100%;
+    transition: var(--tr);
+    background: linear-gradient(90deg, var(--on) 50%, var(--of) 50%);
+    animation: move-color 3s ease 0s 1;
+}
+
+/* Move the track background when the checkbox is checked */
+#btn:checked+label .track:before {
+    left: 0%;
+}
+
+/* Style the thumb element */
+.thumb {
+    position: absolute;
+    width: calc(calc(var(--sz) * 2) - calc(var(--sz) / 5));
+    height: calc(calc(var(--sz) * 2) - calc(var(--sz) / 5));
+    top: calc(calc(var(--sz) / 10) + calc(var(--sz) / 200));
+    left: calc(calc(var(--sz) / 10) + calc(var(--sz) / 100));
+    background: radial-gradient(circle at 50% 45%,
+            #fff0 67%,
+            #85d7fbcc calc(67% + 5px)),
+        radial-gradient(circle at 50% 25%, #fff0 61%, #fff8 calc(67% + 5px)),
+        radial-gradient(circle at 50% 25%,
+            #fff0 calc(var(--sz) / 1),
+            var(--on) 100%),
+        radial-gradient(circle at 50% 50%,
+            #fff calc(var(--sz) / 5),
+            #fff0 calc(var(--sz) / 2.5),
+            #c1e0f7 calc(var(--sz) / 1.5)),
+        radial-gradient(circle at 45% 20%, #ffffff, #c1e0f7 calc(var(--sz) / 1));
+    border-radius: var(--sz);
+    box-shadow: 0 0 calc(var(--sz) / 15) 0 #777 inset,
+        0 0 calc(var(--sz) / 10) calc(var(--sz) / 50) #fff2,
+        0 0 calc(var(--sz) / 10) 0 #fff2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    animation: move-thumb 3s ease 0s 1;
+}
+
+/* Move the thumb element when the checkbox is checked */
+#btn:checked+label .thumb {
+    left: calc(calc(100% - calc(calc(var(--sz) * 2) - calc(var(--sz) / 3))) - calc(calc(var(--sz) / 10) + calc(var(--sz) / 7)));
+    box-shadow: 0 0 0 calc(var(--sz) / 50) #0002, 0 0 calc(var(--sz) / 10) 0 #0008,
+        0 0 calc(var(--sz) / 5) 0 var(--on) inset;
+}
+
+/* Style the top and bottom eyelids */
+.thumb:before,
+.thumb:after {
+    content: "";
+    display: block;
+    width: 150%;
+    height: 55%;
+    background: radial-gradient(circle at 50% 80%,
+            #434343,
+            #333 calc(var(--sz) / 1.55),
+            #fff0 calc(calc(var(--sz) / 1.55) + 2px)),
+        #232529;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+    top: -5%;
+    transition: var(--tr);
+    transform: scaleY(0.9);
+    animation: move-eyelid-top 3s ease 0s 1;
+    filter: drop-shadow(0px 2px 2px #000);
+}
+
+.thumb:after {
+    top: 50%;
+    background: radial-gradient(circle at 50% -130%,
+            #fff0 calc(var(--sz) / 0.65),
+            #212121 calc(var(--sz) / 0.64),
+            #444 calc(var(--sz) / 0.45));
+    border-radius: 0;
+    animation-name: move-eyelid-bot;
+    filter: drop-shadow(0px -2px 2px #000c);
+}
+
+/* Move the eyelids when the checkbox is checked */
+#btn:checked+label .thumb:before {
+    top: -55%;
+}
+
+#btn:checked+label .thumb:after {
+    top: 100%;
+}
+
+/* Style the eye element */
+.eye {
+    position: absolute;
+    width: calc(var(--sz) / 3);
+    height: calc(var(--sz) / 3.1);
+    background: radial-gradient(circle at 36% 35%,
+            #8d8d8d 1px,
+            #000 calc(var(--sz) / 8),
+            var(--on));
+    z-index: -2;
+    border-radius: 100%;
+    top: calc(var(--sz) / 1.4);
+    left: calc(var(--sz) / 3.5);
+    filter: blur(0.5px);
+    animation: move-eye 3s ease 0s 1;
+}
+
+/* Move the eye element when the checkbox is checked */
+#btn:checked+label .thumb .eye {
+    top: calc(var(--sz) / 2.25);
+    left: calc(var(--sz) / 0.825);
+}
+
+/* Add a reflection effect to the eye */
+span.eye:before {
+    content: "";
+    position: absolute;
+    width: calc(var(--sz) / 2.5);
+    height: calc(var(--sz) / 2.5);
+    border: calc(var(--sz) / 2.5) solid #fff0;
+    border-top: calc(var(--sz) / 2.5) solid #fffc;
+    border-right: calc(var(--sz) / 2.5) solid #fffc;
+    left: calc(var(--sz) * -1);
+    top: calc(var(--sz) * -0.29);
+    border-radius: 100%;
+    transform: rotate(-87deg);
+    filter: blur(7px);
+}
+
+/* Animations for the thumb, track, eye, and eyelids */
+@keyframes move-thumb {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        left: calc(calc(var(--sz) / 10) + calc(var(--sz) / 100));
+        box-shadow: 0 0 calc(var(--sz) / 15) 0 #777 inset,
+            0 0 calc(var(--sz) / 10) calc(var(--sz) / 50) #fff2,
+            0 0 calc(var(--sz) / 10) 0 #fff2;
+    }
+
+    30%,
+    70% {
+        left: calc(calc(100% - calc(calc(var(--sz) * 2) - calc(var(--sz) / 3))) - calc(calc(var(--sz) / 10) + calc(var(--sz) / 7)));
+        box-shadow: 0 0 0 calc(var(--sz) / 50) #0002,
+            0 0 calc(var(--sz) / 10) 0 #0008,
+            0 0 calc(var(--sz) / 5) 0 var(--on) inset;
+    }
+}
+
+@keyframes move-color {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        left: -100%;
+    }
+
+    30%,
+    70% {
+        left: 0%;
+    }
+}
+
+@keyframes move-eye {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        top: calc(var(--sz) / 1.4);
+        left: calc(var(--sz) / 3.5);
+    }
+
+    30%,
+    70% {
+        top: calc(var(--sz) / 2.25);
+        left: calc(var(--sz) / 0.825);
+    }
+}
+
+@keyframes move-eyelid-top {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        top: -5%;
+    }
+
+    30%,
+    70% {
+        top: -55%;
+    }
+}
+
+@keyframes move-eyelid-bot {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        top: 50%;
+    }
+
+    30%,
+    70% {
+        top: 100%;
+    }
+}
