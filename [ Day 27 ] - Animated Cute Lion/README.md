@@ -28,7 +28,7 @@ You can download the full source code for this project from the following link: 
    Clone this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/Aarzoo75/Animated-Cute-Lion-.git
+   git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2027%20%5D%20-%20Animated%20Cute%20Lion.git
    ```
 
 2. **Open the HTML File**:
