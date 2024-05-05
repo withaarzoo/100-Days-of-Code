@@ -1,5 +1,7 @@
 # Animated Cute Lion
 
+This project is part of Day 27 of the #100DaysOfCode Challenge.
+
 Welcome to the **Animated Cute Lion** repository! This project showcases a delightful animated lion created using HTML and CSS animations. It's a fun and engaging way to learn about web animations while enjoying the cuteness of a lion.
 
 ## Preview
