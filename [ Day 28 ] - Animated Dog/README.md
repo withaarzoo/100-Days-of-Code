@@ -1,4 +1,4 @@
-# Animated Dog CSS
+# Animated Walking Dog
 
 This project is part of the #100DaysOfCode Challenge, specifically Day 28. It showcases an animated dog using CSS animations.
 
