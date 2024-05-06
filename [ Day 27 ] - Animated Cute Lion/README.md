@@ -1,8 +1,6 @@
-# Animated Cute Lion
+# Animated Dog CSS
 
-This project is part of Day 27 of the #100DaysOfCode Challenge.
-
-Welcome to the **Animated Cute Lion** repository! This project showcases a delightful animated lion created using HTML and CSS animations. It's a fun and engaging way to learn about web animations while enjoying the cuteness of a lion.
+This project is part of the #100DaysOfCode Challenge, specifically Day 28. It showcases an animated dog using CSS animations.
 
 ## Preview
 
@@ -10,46 +8,54 @@ Welcome to the **Animated Cute Lion** repository! This project showcases a delig
     <img src="preview.gif" alt="preview GIF" width="100%" height="100%" style="overflow: none; border-radius: inherit;"/>
 </div>
 
-This preview showcases the animated cute lion in action.
+This preview showcases the animated walking dog in action.
 
 ## Download Full Source Code
 
 You can download the full source code for this project from the following link: [Download Source Code](https://t.me/CodeWithAarzoo)
 
+## Description
+
+The code provided creates an animated walking dog using CSS. The dog's various body parts, such as the head, ears, legs, and tail, are animated to create a lifelike movement. The animation is achieved through the use of CSS variables, keyframes, and various positioning and transformation techniques.
+
 ## Features
 
-- 🦁 **Adorable Animation**: Watch an adorable lion come to life through CSS animations.
-- 🌈 **Vibrant Colors**: The lion's vibrant colors make it visually appealing.
-- 🖥️ **Browser Compatibility**: The animation is designed to work across various modern web browsers.
-- 📦 **Easy to Use**: Clone the repository and open the HTML file in your browser to see the animation.
+- Animated walking dog with a moving head, ears, legs, and tail
+- Smooth and fluid animations using CSS keyframes
+- Customizable colors and animation durations through CSS variables
+- Responsive design that scales the dog to fit the viewport
 
-## How to Use
+## Usage
 
-1. **Clone the Repository**:
+To use this project, simply include the CSS code in your HTML file and add the necessary HTML structure for the dog. You can customize the colors and animation durations by modifying the CSS variables at the top of the file.
 
-   Clone this repository to your local machine using the following command:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Walking Dog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="🐕">
+        <!-- Dog structure goes here -->
+    </div>
+</body>
+</html>
+```
 
-   ```bash
-   git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2027%20%5D%20-%20Animated%20Cute%20Lion.git
-   ```
+## Download
 
-2. **Open the HTML File**:
+The full source code for this project can be downloaded from the following link:
 
-   Navigate to the repository folder and open the `index.html` file in your preferred web browser. You'll immediately see the adorable animated lion in action.
+[Download Source Code](https://t.me/CodeWithAarzoo)
 
-3. **Enjoy and Learn**:
 
-   Feel free to explore the HTML and CSS files to understand how the animation is created. This project is a great opportunity to learn about CSS animations and how they can be used to bring elements to life on a webpage.
+## Acknowledgments
 
-## Contribution
-
-Contributions are welcome! If you'd like to enhance the animation, fix any issues, or add new features, follow these steps:
-
-1. Fork the repository to your own GitHub account.
-2. Create a new branch with a descriptive name related to your contribution.
-3. Make your changes and improvements.
-4. Commit and push your changes to your forked repository.
-5. Submit a pull request to this repository, explaining your changes and their benefits.
+This project is part of the #100DaysOfCode Challenge, a popular coding challenge where developers commit to coding for at least an hour every day for 100 days. The challenge is a great way to improve coding skills and build a consistent coding habit.
 
 ## License
 
@@ -63,8 +69,8 @@ This code snippet has been crafted by [Aarzoo](https://twitter.com/withaarzoo).
 
 For any inquiries or assistance regarding this project, feel free to reach out to the developer, Aarzoo, via [Bento](https://bento.me/withaarzoo).
 
-Enjoy coding and have fun with your animated cute lion 🦁✨
+Enjoy coding and have fun with your animated walking dog 🦁✨
 
 ---
 
-Enjoy using the animated cute lion! If you have any questions or suggestions, please feel free to reach out.
+Enjoy using the animated walking dog! If you have any questions or suggestions, please feel free to reach out.
