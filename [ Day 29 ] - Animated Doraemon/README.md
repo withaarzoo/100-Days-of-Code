@@ -1,5 +1,7 @@
 # Animated Doraemon
 
+This project is part of Day 29 of the #100DaysOfCode Challenge.
+
 This is a simple HTML and CSS code snippet to create an animated representation of Doraemon, the famous cartoon character. The code utilizes basic HTML structure along with CSS styling to create the visual effect .
 
 ## Preview
