@@ -1,0 +1,291 @@
+/* Set background gradient for the entire body */
+body {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+/* Center the following elements */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Define head styles */
+.head {
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    background: #3c9dca;
+    border: black solid thick;
+}
+
+/* Define white part of eyes */
+.white {
+    width: 524px;
+    height: 462px;
+    border-radius: 100%;
+    position: relative;
+    top: 120px;
+    left: 38px;
+    background: #fff;
+    border: black solid thin;
+    z-index: 0;
+}
+
+/* Define styles for white part of eyes */
+.eye_white {
+    position: relative;
+    top: 60px;
+    left: 130px;
+    z-index: 1;
+}
+
+/* Define styles for individual eye whites */
+.eye_white li {
+    width: 125px;
+    height: 152px;
+    border-radius: 100%;
+    background: #fff;
+    list-style: none;
+    border: black solid thin;
+    display: block;
+    float: left;
+}
+
+/* Define styles for the black part of eyes */
+.eye_black {
+    width: 25px;
+    height: 45px;
+    border-radius: 100%;
+    background: #000;
+    list-style: none;
+    top: 80px;
+    position: relative;
+    border: black solid thin;
+    display: block;
+    left: 10px;
+    -webkit-animation: move 6s ease infinite;
+    animation: move 6s ease infinite;
+}
+
+/* Define animation for the black part of eyes */
+@-webkit-keyframes move {
+    16% {
+        top: 95px;
+        left: 30px;
+    }
+
+    32% {
+        top: 100px;
+        left: 60px;
+    }
+
+    48% {
+        top: 80px;
+        left: 90px;
+    }
+
+    64% {
+        top: 100px;
+        left: 60px;
+    }
+
+    80% {
+        top: 95px;
+        left: 30px;
+    }
+}
+
+@keyframes move {
+    16% {
+        top: 95px;
+        left: 30px;
+    }
+
+    32% {
+        top: 100px;
+        left: 60px;
+    }
+
+    48% {
+        top: 80px;
+        left: 90px;
+    }
+
+    64% {
+        top: 100px;
+        left: 60px;
+    }
+
+    80% {
+        top: 95px;
+        left: 30px;
+    }
+}
+
+/* Define styles for the white part of the black eyes */
+.eye_black::before {
+    content: "";
+    width: 10px;
+    height: 15px;
+    border-radius: 100%;
+    background: #fff;
+    list-style: none;
+    top: 16px;
+    position: relative;
+    display: block;
+    left: 7px;
+}
+
+/* Define styles for the left lines */
+.line_left {
+    width: 150px;
+    height: 2px;
+    transform: rotate(20deg);
+    top: 90px;
+    left: 14px;
+    position: relative;
+    border-radius: 10%;
+    background: #000;
+    list-style: none;
+    display: block;
+}
+
+/* Additional styles for left lines */
+.line_left::before {
+    content: "";
+    width: 150px;
+    height: 2px;
+    top: 70px;
+    transform: rotate(-20deg);
+    position: relative;
+    border-radius: 10%;
+    background: #000;
+    list-style: none;
+    display: block;
+}
+
+.line_left::after {
+    content: "";
+    transform: rotate(-40deg);
+    width: 150px;
+    height: 2px;
+    top: 120px;
+    left: 30px;
+    position: relative;
+    border-radius: 10%;
+    background: #000;
+    list-style: none;
+    display: block;
+}
+
+/* Define styles for the right lines */
+.line_right {
+    width: 150px;
+    height: 2px;
+    transform: rotate(160deg);
+    top: 90px;
+    left: 370px;
+    position: relative;
+    border-radius: 10%;
+    background: #000;
+    list-style: none;
+    display: block;
+}
+
+/* Additional styles for right lines */
+.line_right::before {
+    content: "";
+    width: 150px;
+    height: 2px;
+    bottom: 100px;
+    position: relative;
+    transform: rotate(30deg);
+    border-radius: 10%;
+    background: #000;
+    list-style: none;
+    display: block;
+    left: 20px;
+}
+
+.line_right::after {
+    content: "";
+    width: 150px;
+    height: 2px;
+    bottom: 50px;
+    transform: rotate(10deg);
+    left: 0px;
+    position: relative;
+    border-radius: 10%;
+    background: #000;
+    list-style: none;
+    display: block;
+}
+
+/* Define styles for the nose */
+.nose {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    background: #b90319;
+    list-style: none;
+    top: 60px;
+    position: relative;
+    border: black solid thin;
+    display: block;
+    left: 236px;
+    z-index: 2;
+}
+
+/* Define styles for the nose tip */
+.nose::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #fff;
+    list-style: none;
+    top: 19px;
+    position: relative;
+    border: black solid thin;
+    display: block;
+    left: 9px;
+}
+
+/* Define styles for the vertical line on the face */
+.line_vertical {
+    width: 2px;
+    height: 310px;
+    top: 40px;
+    left: 258px;
+    position: relative;
+    border-radius: 10%;
+    background: #000;
+    z-index: 1;
+}
+
+/* Define styles for the mouth */
+.mouth {
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    top: -358px;
+    left: 62px;
+    position: relative;
+    background: #000;
+    z-index: -1;
+}
+
+/* Additional styles for the mouth */
+.mouth::after {
+    content: "";
+    width: 402px;
+    height: 401px;
+    top: -4px;
+    left: -1px;
+    border-radius: 100%;
+    position: relative;
+    display: block;
+    background: #fff;
+}
