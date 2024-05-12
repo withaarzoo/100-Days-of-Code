@@ -1,0 +1,108 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* GLOBAL CONFIG RESET */
+/* Apply box-sizing and reset margins, paddings, and font-family */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+ 
+/* Remove focus outlines for select, input, and button elements */
+select:focus,
+input:focus,
+button:focus {
+    outline: none;
+}
+
+/* BODY DISPLAY */
+/* Style for the body element */
+body {
+    background-color: #222;
+    overflow: hidden; /* Hide overflowing content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Minimum height of the viewport */
+}
+
+/* TYPE SELECTORS */
+/* Apply styles to specific HTML elements */
+
+/* CLASS */
+/* Styles for the container class */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the box class within the container */
+.container .box {
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+    animation: animate 7s ease-in-out infinite alternate; /* Apply animation */
+}
+
+/* Styles for spans within the box class */
+.container .box span {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 90%, transparent);
+    /* Gradient background */
+    text-transform: uppercase;
+    /* Uppercase text */
+    line-height: 0.76em;
+    /* Set line height */
+    position: absolute;
+    /* Positioning */
+    color: #fff;
+    /* Text color */
+    font-size: 3.5em;
+    /* Font size */
+    white-space: nowrap;
+    /* Prevent wrapping */
+    font-weight: bold;
+    /* Bold text */
+    padding: 0px 10px;
+    /* Padding */
+    transform-style: preserve-3d;
+    /* Preserve 3D transformations */
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    /* Text shadow */
+    transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(109px);
+    /* Transformation */
+}
+
+/* Styles for italicized elements within spans */
+.container .box span i {
+    font-style: initial;
+    /* Reset font style */
+}
+
+/* Styles for the first child italicized element within spans */
+.container .box span i:nth-child(1) {
+    color: #5c5fc4;
+    /* Color */
+}
+
+/* Styles for the second child italicized element within spans */
+.container .box span i:nth-child(2) {
+    color: #c4c15c;
+    /* Color */
+}
+
+/* Keyframe animation */
+@keyframes animate {
+    0% {
+        transform: perspective(500px) rotateX(0deg) rotate(5deg);
+        /* Initial transformation */
+    }
+
+    100% {
+        transform: perspective(50px) rotateX(360deg) rotate(5deg);
+        /* Final transformation */
+    }
+}
+
+/* MEDIA QUERY */
+/* Define styles for different screen sizes */
