@@ -1,0 +1,219 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+
+/* Styling for the body element */
+body {
+    /* Set font family */
+    font-family: "Poppins", sans-serif;
+    /* Use flexbox layout */
+    display: flex;
+    /* Arrange children in a column */
+    flex-direction: column;
+    /* Center items horizontally */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Set minimum height to full viewport height */
+    min-height: 100vh;
+    /* Set background gradient */
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    /* Set text color */
+    color: #20a6ff;
+    /* Set font size */
+    font-size: 1.5rem;
+}
+
+/* Styling for the pencil element */
+.pencil {
+    /* Set position to relative */
+    position: relative;
+    /* Set width */
+    width: 300px;
+    /* Set height */
+    height: 40px;
+    /* Set transform-origin to center */
+    transform-origin: center;
+    /* Rotate the pencil */
+    transform: rotate(135deg);
+    /* Apply animation */
+    animation: pencil-animation 10s infinite;
+}
+
+/* Styling for the pencil ball point */
+.pencil__ball-point {
+    /* Set position to absolute */
+    position: absolute;
+    /* Align to left */
+    left: 0;
+    /* Align to vertical center */
+    top: 50%;
+    /* Adjust vertical position */
+    transform: translateY(-50%);
+    /* Set background color */
+    background: #026ef3;
+    /* Set height */
+    height: 10px;
+    /* Set width */
+    width: 10px;
+    /* Apply border-radius */
+    border-radius: 50px;
+}
+
+/* Styling for the pencil cap */
+.pencil__cap {
+    /* Set position to absolute */
+    position: absolute;
+    /* Align to left */
+    left: 0px;
+    /* Align to vertical center */
+    top: 50%;
+    /* Adjust vertical position */
+    transform: translateY(-50%);
+    /* Clip path for cap shape */
+    clip-path: polygon(20% 40%, 100% 0%, 100% 100%, 20% 60%);
+    /* Set background color */
+    background: #232123;
+    /* Set width */
+    width: 12%;
+    /* Set height */
+    height: 100%;
+}
+
+/* Styling for the pencil cap base */
+.pencil__cap-base {
+    /* Set position to absolute */
+    position: absolute;
+    /* Align to left */
+    left: 12%;
+    /* Align to top */
+    top: 0;
+    /* Set height */
+    height: 100%;
+    /* Set width */
+    width: 20px;
+    /* Set background color */
+    background: #232123;
+}
+
+/* Styling for the pencil middle part */
+.pencil__middle {
+    /* Set position to absolute */
+    position: absolute;
+    /* Calculate left position */
+    left: calc(12% + 20px);
+    /* Align to top */
+    top: 0;
+    /* Set height */
+    height: 100%;
+    /* Set width */
+    width: 70%;
+    /* Set background color */
+    background: #0958c4;
+}
+
+.pencil__middle::before {
+    /* Add content before the element */
+    content: "withaarzoo";
+    /* Set font size */
+    font-size: 0.9rem;
+    /* Add padding to the left */
+    padding-left: 2rem;
+}
+
+/* Styling for the pencil eraser */
+.pencil__eraser {
+    /* Set position to absolute */
+    position: absolute;
+    /* Calculate left position */
+    left: calc(12% + 70% + 20px);
+    /* Align to top */
+    top: 0;
+    /* Set height */
+    height: 100%;
+    /* Set width */
+    width: 11%;
+    /* Apply border-radius */
+    border-top-right-radius: 5px;
+    /* Apply border-radius */
+    border-bottom-right-radius: 5px;
+    /* Set background color */
+    background: #232123;
+}
+
+/* Styling for the line element */
+.line {
+    /* Set position to relative */
+    position: relative;
+    /* Move down from the top */
+    top: 80px;
+    /* Move right from the right */
+    right: 103px;
+    /* Set height */
+    height: 10px;
+    /* Set width */
+    width: 1000px;
+    /* Set z-index */
+    z-index: -1;
+    /* Apply border-radius */
+    border-radius: 50px;
+    /* Set background color */
+    background: #026ef3;
+    /* Set initial scale */
+    transform: scaleX(0);
+    /* Set transform-origin to center */
+    transform-origin: center;
+    /* Apply animation */
+    animation: line-animation 10s infinite;
+}
+
+/* Styling for h2 elements */
+h2 {
+    /* Set position to relative */
+    position: relative;
+    /* Move down from the top */
+    top: 150px;
+    /* Move right from the right */
+    right: 75px;
+}
+
+/* Keyframes for pencil animation */
+@keyframes pencil-animation {
+    0% {
+        transform: rotate(135deg);
+    }
+
+    20% {
+        transform: rotate(315deg);
+    }
+
+    45% {
+        transform: translateX(300px) rotate(315deg);
+    }
+
+    55% {
+        transform: translateX(300px) rotate(495deg);
+    }
+
+    100% {
+        transform: rotate(495deg);
+    }
+}
+
+/* Keyframes for line animation */
+@keyframes line-animation {
+    20% {
+        transform: scaleX(0);
+    }
+
+    45% {
+        transform: scaleX(0.6);
+    }
+
+    55% {
+        transform: scaleX(0.6);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
