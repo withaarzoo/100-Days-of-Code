@@ -25,7 +25,7 @@ To run this code, you will need a web browser that supports SVGs.
 You can download the source code directly or clone the repository using the following command:
 
 ``` bash
-git clone https://github.com/Aarzoo75/Pencil-Loader.git
+git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2032%20%5D%20-%20Animated%20Pencil%20Loader2.git
 ```
 
 ## Usage
