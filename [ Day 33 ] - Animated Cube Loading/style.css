@@ -1,0 +1,288 @@
+/* General body settings to prevent overflow, remove margins, set height and perspective */
+body {
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    perspective: 32em;
+    /* Perspective distance for 3D effect */
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    /* Background gradient */
+}
+
+/* General settings for all div elements to position absolutely and preserve 3D transformations */
+div {
+    position: absolute;
+    transform-style: preserve-3d;
+    /* Ensures child elements are transformed in 3D space */
+}
+
+/* Main assembly container centering and initial rotation */
+.assembly {
+    top: 50%;
+    left: 50%;
+    transform: rotateX(-45deg) rotateY(-45deg);
+    /* Initial 3D rotation */
+}
+
+/* Common animation settings for 3D components */
+.comp-3d {
+    animation: r 2s ease-in-out infinite;
+    /* Infinite animation with easing */
+}
+
+/* Specific animation name for inner assembly */
+.comp-3d--i {
+    animation-name: ri;
+    /* Uses 'ri' keyframes */
+}
+
+/* Specific animation name for outer assembly */
+.comp-3d--o {
+    animation-name: ro;
+    /* Uses 'ro' keyframes */
+}
+
+/* Keyframes for inner assembly rotation */
+@keyframes ri {
+
+    0%,
+    20% {
+        transform: rotateY(-0.5turn);
+        /* Rotates -180 degrees on Y-axis */
+    }
+
+    50% {
+        transform: none;
+        /* No transformation at 50% */
+    }
+
+    100%,
+    80% {
+        transform: rotateX(-0.5turn);
+        /* Rotates -180 degrees on X-axis */
+    }
+}
+
+/* Keyframes for outer assembly rotation */
+@keyframes ro {
+
+    0%,
+    35% {
+        transform: rotate(-0.5turn);
+        /* Rotates -180 degrees */
+    }
+
+    65%,
+    100% {
+        transform: none;
+        /* No transformation at 65% and 100% */
+    }
+}
+
+/* Transformations for cubes in different positions */
+.pos:nth-child(1) {
+    transform: scale3d(1, 1, 1) translate3d(4em, 4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(1) {
+    transform: translate3d(-4em, -4em, 0em);
+}
+
+.pos:nth-child(2) {
+    transform: scale3d(1, 1, -1) translate3d(4em, 4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(2) {
+    transform: translate3d(-4em, 0em, -4em);
+}
+
+/* Transformations for other cubes (3-18) */
+:not(.pos)>.cube:nth-child(3) {
+    transform: translate3d(-4em, 0em, 0em);
+}
+
+:not(.pos)>.cube:nth-child(4) {
+    transform: translate3d(-4em, 0em, 4em);
+}
+
+.pos:nth-child(3) {
+    transform: scale3d(1, -1, 1) translate3d(4em, 4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(5) {
+    transform: translate3d(-4em, 4em, 0em);
+}
+
+.pos:nth-child(4) {
+    transform: scale3d(1, -1, -1) translate3d(4em, 4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(6) {
+    transform: translate3d(0em, -4em, -4em);
+}
+
+:not(.pos)>.cube:nth-child(7) {
+    transform: translate3d(0em, -4em, 0em);
+}
+
+:not(.pos)>.cube:nth-child(8) {
+    transform: translate3d(0em, -4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(9) {
+    transform: translate3d(0em, 0em, -4em);
+}
+
+:not(.pos)>.cube:nth-child(10) {
+    transform: translate3d(0em, 0em, 0em);
+}
+
+:not(.pos)>.cube:nth-child(11) {
+    transform: translate3d(0em, 0em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(12) {
+    transform: translate3d(0em, 4em, -4em);
+}
+
+:not(.pos)>.cube:nth-child(13) {
+    transform: translate3d(0em, 4em, 0em);
+}
+
+:not(.pos)>.cube:nth-child(14) {
+    transform: translate3d(0em, 4em, 4em);
+}
+
+.pos:nth-child(5) {
+    transform: scale3d(-1, 1, 1) translate3d(4em, 4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(15) {
+    transform: translate3d(4em, -4em, 0em);
+}
+
+.pos:nth-child(6) {
+    transform: scale3d(-1, 1, -1) translate3d(4em, 4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(16) {
+    transform: translate3d(4em, 0em, -4em);
+}
+
+:not(.pos)>.cube:nth-child(17) {
+    transform: translate3d(4em, 0em, 0em);
+}
+
+:not(.pos)>.cube:nth-child(18) {
+    transform: translate3d(4em, 0em, 4em);
+}
+
+.pos:nth-child(7) {
+    transform: scale3d(-1, -1, 1) translate3d(4em, 4em, 4em);
+}
+
+:not(.pos)>.cube:nth-child(19) {
+    transform: translate3d(4em, 4em, 0em);
+}
+
+.pos:nth-child(8) {
+    transform: scale3d(-1, -1, -1) translate3d(4em, 4em, 4em);
+}
+
+/* Animation for cubes within 'pos' elements */
+.pos .cube {
+    animation: m 2s ease-out infinite;
+    /* Infinite animation with easing */
+}
+
+/* Styles for cube faces */
+.cube__face {
+    margin: -2em;
+    width: 4em;
+    height: 4em;
+    box-shadow: 0 0 2em rgba(220, 220, 220, 0.5) inset;
+    /* Inner shadow for depth effect */
+    backface-visibility: hidden;
+    /* Hides back face when rotated */
+    background: rgb(222, 238, 253);
+    /* Light blue background */
+}
+
+/* Slight brightness adjustment for even-numbered faces */
+.cube__face:nth-child(2n) {
+    filter: brightness(0.97);
+}
+
+/* Slight brightness increase for faces with index 5 and above */
+.cube__face:nth-child(n + 5) {
+    filter: brightness(1.03);
+}
+
+/* Transformations for positioning each face of the cube */
+.cube__face:nth-child(1) {
+    transform: rotateY(0deg) translateZ(2em);
+    /* Front face */
+}
+
+.cube__face:nth-child(2) {
+    transform: rotateY(90deg) translateZ(2em);
+    /* Right face */
+}
+
+.cube__face:nth-child(3) {
+    transform: rotateY(180deg) translateZ(2em);
+    /* Back face */
+}
+
+.cube__face:nth-child(4) {
+    transform: rotateY(270deg) translateZ(2em);
+    /* Left face */
+}
+
+.cube__face:nth-child(5) {
+    transform: rotateX(90deg) translateZ(2em);
+    /* Top face */
+}
+
+.cube__face:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(2em);
+    /* Bottom face */
+}
+
+/* Keyframes for cube movement within 'pos' elements */
+@keyframes m {
+
+    0%,
+    5%,
+    95%,
+    100% {
+        transform: none;
+        /* No transformation at start, 5%, 95%, and end */
+    }
+
+    15% {
+        transform: translate3d(0, 4em, 0);
+        /* Move up by 4em */
+    }
+
+    25% {
+        transform: translate3d(0, 4em, 4em);
+        /* Move up and forward by 4em */
+    }
+
+    35%,
+    65% {
+        transform: translate3d(4em, 4em, 4em);
+        /* Move diagonally up, forward, and to the right */
+    }
+
+    75% {
+        transform: translate3d(4em, 0, 4em);
+        /* Move down to original height, forward and to the right */
+    }
+
+    85% {
+        transform: translate3d(4em, 0, 0);
+        /* Move back to original position */
+    }
+}
