@@ -1,6 +1,6 @@
 # 100 Days Of Code
 
-Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the projects and code snippets I've worked on during my 100-day coding journey .
+Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the projects and code snippets I've worked on during my 100-day coding journey . 
 
 ## Overview
 
@@ -42,6 +42,7 @@ You can explore the following folders to access individual projects and code sam
 - [Day 30 : 3D Rotate Tube](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2030%20%5D%20-%203D%20Rotate%20Tube) : This is a simple HTML and CSS code snippet that creates a 3D rotating tube with animated text on its faces. The tube is displayed in a webpage and the text on each face of the tubr changes dynamically, creating a visually engaging effect.
 - [Day 31 : Animated Pencil Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2031%20%5D%20-%20Animated%20Pencil%20Loader) : This repository contains HTML and CSS code for an animated pencil loader, designed to be used as a loading animation for web pages. The loader consists of a pencil icon that animates in a loop, giving users a visual cue that the page is still loading.
 - [Day 32 : Animated Pencil Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2032%20%5D%20-%20Animated%20Pencil%20Loader2) : This is an HTML and CSS code for a pencil loader animation. The loader consists of a pencil with three different-colored circular bodies, an eraser, and a point.
+- [Day 33 : Animated Cube Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2033%20%5D%20-%20Animated%20Cube%20Loading) : This repository contains the code for a simple yet visually appealing animated cube loader that can be used to indicate loading progress on a website.
   
 Feel free to dive into any folder to view the code and project details.
 
