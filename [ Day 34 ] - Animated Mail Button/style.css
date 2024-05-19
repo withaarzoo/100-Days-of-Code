@@ -1,0 +1,191 @@
+/* Sets the background color of the body */
+body {
+    background-color: #f8dfca;
+}
+
+/* Container for the letter image, centering it within the page */
+.letter-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    /* Centers the div */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+}
+
+/* Main container for the animated mail */
+.animated-mail {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    transition: 0.4s;
+    /* Smooth transition for animation */
+}
+
+/* The body of the envelope */
+.animated-mail .body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 200px;
+    /* Creates the envelope shape */
+    border-color: transparent transparent #e95f55 transparent;
+    /* Colors the envelope */
+    z-index: 2;
+    /* Stacks this element above others */
+}
+
+/* The top fold of the envelope */
+.animated-mail .top-fold {
+    position: absolute;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 100px 0 100px;
+    /* Creates the triangular fold */
+    transform-origin: 50% 0%;
+    /* Sets the pivot point for transformations */
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    /* Delayed transition for smooth animation */
+    border-color: #cf4a43 transparent transparent transparent;
+    /* Colors the fold */
+    z-index: 2;
+    /* Stacks this element above others */
+}
+
+/* The back fold of the envelope */
+.animated-mail .back-fold {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    background: #cf4a43;
+    /* Colors the back fold */
+    z-index: 0;
+    /* Stacks this element below others */
+}
+
+/* The left fold of the envelope */
+.animated-mail .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 100px;
+    /* Creates the triangular fold */
+    border-color: transparent transparent transparent #e15349;
+    /* Colors the fold */
+    z-index: 2;
+    /* Stacks this element above others */
+}
+
+/* The letter inside the envelope */
+.animated-mail .letter {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: 160px;
+    height: 60px;
+    background: white;
+    /* Colors the letter */
+    z-index: 1;
+    /* Stacks this element below others */
+    overflow: hidden;
+    /* Hides overflowing content */
+    transition: 0.4s 0.2s;
+    /* Delayed transition for smooth animation */
+}
+
+/* The border of the letter */
+.animated-mail .letter .letter-border {
+    height: 10px;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 8px, transparent 8px, transparent 18px);
+    /* Creates a striped pattern */
+}
+
+/* The title section of the letter */
+.animated-mail .letter .letter-title {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 40%;
+    background: #cb5a5e;
+    /* Colors the title */
+}
+
+/* The context/body section of the letter */
+.animated-mail .letter .letter-context {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 20%;
+    background: #cb5a5e;
+    /* Colors the context */
+}
+
+/* The stamp on the letter */
+.animated-mail .letter .letter-stamp {
+    margin-top: 30px;
+    margin-left: 120px;
+    border-radius: 100%;
+    /* Makes the stamp circular */
+    height: 30px;
+    width: 30px;
+    background: #cb5a5e;
+    /* Colors the stamp */
+    opacity: 0.3;
+    /* Makes the stamp semi-transparent */
+}
+
+/* The shadow effect under the envelope */
+.shadow {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 400px;
+    height: 30px;
+    border-radius: 100%;
+    /* Makes the shadow oval */
+    background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    /* Creates a fading shadow */
+    transition: 0.4s;
+    /* Smooth transition for animation */
+    transform: translateX(-50%);
+    /* Centers the shadow */
+}
+
+/* Animation effects on hover */
+.letter-image:hover .animated-mail {
+    transform: translateY(50px);
+    /* Moves the mail down */
+}
+
+/* Animation effects for the top fold on hover */
+.letter-image:hover .animated-mail .top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    /* Smooth transition for rotation */
+    transform: rotateX(180deg);
+    /* Rotates the top fold */
+    z-index: 0;
+    /* Changes stacking order */
+}
+
+/* Animation effects for the letter on hover */
+.letter-image:hover .animated-mail .letter {
+    height: 180px;
+    /* Expands the letter */
+}
+
+/* Animation effects for the shadow on hover */
+.letter-image:hover .shadow {
+    width: 250px;
+    /* Narrows the shadow */
+}
