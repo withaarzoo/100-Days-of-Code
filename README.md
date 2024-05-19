@@ -43,6 +43,7 @@ You can explore the following folders to access individual projects and code sam
 - [Day 31 : Animated Pencil Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2031%20%5D%20-%20Animated%20Pencil%20Loader) : This repository contains HTML and CSS code for an animated pencil loader, designed to be used as a loading animation for web pages. The loader consists of a pencil icon that animates in a loop, giving users a visual cue that the page is still loading.
 - [Day 32 : Animated Pencil Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2032%20%5D%20-%20Animated%20Pencil%20Loader2) : This is an HTML and CSS code for a pencil loader animation. The loader consists of a pencil with three different-colored circular bodies, an eraser, and a point.
 - [Day 33 : Animated Cube Loader](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2033%20%5D%20-%20Animated%20Cube%20Loading) : This repository contains the code for a simple yet visually appealing animated cube loader that can be used to indicate loading progress on a website.
+- [Day 34 : Animated Mail Button](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2034%20%5D%20-%20Animated%20Mail%20Button) : It features an animated mail button created using HTML and CSS. When you hover over the mail button, the top fold of the envelope rotates, and the letter inside expands to reveal its content. A shadow effect also adjusts to enhance the animation.
   
 Feel free to dive into any folder to view the code and project details.
 
