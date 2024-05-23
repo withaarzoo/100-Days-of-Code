@@ -52,7 +52,7 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use and 
 
 ## Feedback and Contributions
 
-Feedback, bug reports, and contributions are welcome! Please submit them via [GitHub Issues](https://github.com/withaarzoo/button-compression-animation/issues) or create a pull request with your proposed changes.
+Feedback, bug reports, and contributions are welcome! Please submit them via [GitHub Issues](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2036%20%5D%20-%20Animated%20Compress%20File%20Button/issues) or create a pull request with your proposed changes.
 
 ## Credits
 
