@@ -1,0 +1,2920 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-image: radial-gradient(#305f9c, #12243b);
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+body .scene,
+body .scene * {
+  transform-style: preserve-3d;
+}
+
+body .scene {
+  position: relative;
+  width: 70vmin;
+  height: 20vmin;
+  transform: rotateX(-30deg) rotateY(-10deg) scale3d(1, 1, 1);
+  animation: rot 20s ease-in-out 0s infinite alternate;
+}
+
+@keyframes rot {
+  to {
+    transform: rotateX(0deg) rotateY(440deg) scale3d(1, 1, 1);
+  }
+}
+
+body .scene::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -100;
+  transform: rotateX(90deg) translateZ(calc(70vmin / -2)) scale(1);
+}
+
+body .scene .cube,
+body .scene .cube * {
+  position: absolute;
+  bottom: 0;
+}
+
+body .scene #ground {
+  z-index: -50;
+  width: 70vmin;
+  height: 3vmin;
+}
+
+body .scene #ground .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene #ground .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene #ground .container .left {
+  width: 70vmin;
+  height: 3vmin;
+  background-color: #92C54E;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-35vmin);
+}
+
+body .scene #ground .container .right {
+  width: 70vmin;
+  height: 3vmin;
+  background-color: #92C54E;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-35vmin) translateZ(70vmin);
+}
+
+body .scene #ground .container .top {
+  background-color: #9ecb61;
+  width: 70vmin;
+  height: 70vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(35vmin) translateZ(3vmin);
+}
+
+body .scene #ground .container .bottom {
+  background-color: #9ecb61;
+  width: 70vmin;
+  height: 70vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(35vmin);
+}
+
+body .scene #ground .container .front {
+  background-color: #7eb03a;
+  width: 70vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: translateZ(35vmin);
+}
+
+body .scene #ground .container .back {
+  background-color: #7eb03a;
+  width: 70vmin;
+  height: 3vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(35vmin);
+}
+
+body .scene #ground .container .left,
+body .scene #ground .container .right,
+body .scene #ground .container .front,
+body .scene #ground .container .back {
+  background-image: linear-gradient(180deg, #0000 0% 20%, #6C883E 20% 45%, #BC7D3D 45% 100%);
+}
+
+body .scene #ground .container .bottom {
+  background-color: #E1B366;
+  filter: drop-shadow(0 0 3.75rem black);
+}
+
+body .scene #ground .container .top {
+  box-shadow: inset 0 0 15vmin #000a;
+  background-image: radial-gradient(#0008, #0000 10em), repeating-linear-gradient(90deg, #0000 0% 50%, #0001 50% 100%);
+  background-size: 100%, 4em 4em, 4em 4em;
+}
+
+@keyframes moveGround {
+  to {
+    background-position-x: center, 4em, 4em;
+  }
+}
+
+body .scene .flowers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  transform: translate3d(0, -3.02vmin, 0);
+}
+
+body .scene .flowers div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+
+body .scene .flowers #flower-1 {
+  transform: translate3d(14vmin, 0vmin, -25vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) {
+  width: 8vmin;
+  height: 1vmin;
+  transform: translate3d(0, 0, 0);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container .left {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container .right {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container .top {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container .bottom {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container .front {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container .back {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(1) .container .bottom {
+  box-shadow: 0 0 5vmin #000;
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) {
+  width: 2vmin;
+  height: 7vmin;
+  transform: translate3d(3vmin, -1vmin, 0);
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container .left {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container .right {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1vmin) translateZ(2vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container .top {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1vmin) translateZ(7vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container .bottom {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container .front {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(2) .container .back {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) {
+  width: 8vmin;
+  height: 1.5vmin;
+  transform: translate3d(0vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container .left {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #F15D5C;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container .right {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #F15D5C;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container .top {
+  background-color: #f37473;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container .bottom {
+  background-color: #f37473;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container .front {
+  background-color: #ee3836;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(3) .container .back {
+  background-color: #ee3836;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) {
+  width: 10vmin;
+  height: 1.5vmin;
+  transform: translate3d(-1vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container .left {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #F15D5C;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container .right {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #F15D5C;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(10vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container .top {
+  background-color: #f37473;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container .bottom {
+  background-color: #f37473;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container .front {
+  background-color: #ee3836;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(4) .container .back {
+  background-color: #ee3836;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) {
+  width: 3vmin;
+  height: 1.5vmin;
+  transform: translate3d(2.5vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container .left {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #F15D5C;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container .right {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #F15D5C;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container .top {
+  background-color: #f37473;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container .bottom {
+  background-color: #f37473;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container .front {
+  background-color: #ee3836;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(5) .container .back {
+  background-color: #ee3836;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) {
+  width: 3vmin;
+  height: 1vmin;
+  transform: translate3d(2.5vmin, -9vmin, 0);
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container .left {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #ECD015;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container .right {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #ECD015;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container .top {
+  background-color: #eed52d;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container .bottom {
+  background-color: #eed52d;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container .front {
+  background-color: #c8b010;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-1 div:nth-child(6) .container .back {
+  background-color: #c8b010;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-2 {
+  transform: translate3d(7vmin, 0vmin, 20vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) {
+  width: 8vmin;
+  height: 1vmin;
+  transform: translate3d(0, 0, 0);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container .left {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container .right {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container .top {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container .bottom {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container .front {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container .back {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(1) .container .bottom {
+  box-shadow: 0 0 5vmin #000;
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) {
+  width: 2vmin;
+  height: 7vmin;
+  transform: translate3d(3vmin, -1vmin, 0);
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container .left {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container .right {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1vmin) translateZ(2vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container .top {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1vmin) translateZ(7vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container .bottom {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container .front {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(2) .container .back {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) {
+  width: 8vmin;
+  height: 1.5vmin;
+  transform: translate3d(0vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container .left {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #F47A2D;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container .right {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #F47A2D;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container .top {
+  background-color: #f58945;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container .bottom {
+  background-color: #f58945;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container .front {
+  background-color: #ec630c;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(3) .container .back {
+  background-color: #ec630c;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) {
+  width: 10vmin;
+  height: 1.5vmin;
+  transform: translate3d(-1vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container .left {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #F47A2D;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container .right {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #F47A2D;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(10vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container .top {
+  background-color: #f58945;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container .bottom {
+  background-color: #f58945;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container .front {
+  background-color: #ec630c;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(4) .container .back {
+  background-color: #ec630c;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) {
+  width: 3vmin;
+  height: 1.5vmin;
+  transform: translate3d(2.5vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container .left {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #F47A2D;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container .right {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #F47A2D;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container .top {
+  background-color: #f58945;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container .bottom {
+  background-color: #f58945;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container .front {
+  background-color: #ec630c;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(5) .container .back {
+  background-color: #ec630c;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) {
+  width: 3vmin;
+  height: 1vmin;
+  transform: translate3d(2.5vmin, -9vmin, 0);
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container .left {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #0D6B37;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container .right {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #0D6B37;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container .top {
+  background-color: #108243;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container .bottom {
+  background-color: #108243;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container .front {
+  background-color: #094724;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-2 div:nth-child(6) .container .back {
+  background-color: #094724;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-3 {
+  transform: translate3d(53vmin, 0vmin, -20vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) {
+  width: 8vmin;
+  height: 1vmin;
+  transform: translate3d(0, 0, 0);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container .left {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container .right {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container .top {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container .bottom {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container .front {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container .back {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(1) .container .bottom {
+  box-shadow: 0 0 5vmin #000;
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) {
+  width: 2vmin;
+  height: 7vmin;
+  transform: translate3d(3vmin, -1vmin, 0);
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container .left {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container .right {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1vmin) translateZ(2vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container .top {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1vmin) translateZ(7vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container .bottom {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container .front {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(2) .container .back {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) {
+  width: 8vmin;
+  height: 1.5vmin;
+  transform: translate3d(0vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container .left {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #81ACD8;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container .right {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #81ACD8;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container .top {
+  background-color: #94b9de;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container .bottom {
+  background-color: #94b9de;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container .front {
+  background-color: #6297ce;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(3) .container .back {
+  background-color: #6297ce;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) {
+  width: 10vmin;
+  height: 1.5vmin;
+  transform: translate3d(-1vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container .left {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #81ACD8;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container .right {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #81ACD8;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(10vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container .top {
+  background-color: #94b9de;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container .bottom {
+  background-color: #94b9de;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container .front {
+  background-color: #6297ce;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(4) .container .back {
+  background-color: #6297ce;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) {
+  width: 3vmin;
+  height: 1.5vmin;
+  transform: translate3d(2.5vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container .left {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #81ACD8;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container .right {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #81ACD8;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container .top {
+  background-color: #94b9de;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container .bottom {
+  background-color: #94b9de;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container .front {
+  background-color: #6297ce;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(5) .container .back {
+  background-color: #6297ce;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) {
+  width: 3vmin;
+  height: 1vmin;
+  transform: translate3d(2.5vmin, -9vmin, 0);
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container .left {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #EC3536;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container .right {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #EC3536;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container .top {
+  background-color: #ee4c4d;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container .bottom {
+  background-color: #ee4c4d;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container .front {
+  background-color: #e31516;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-3 div:nth-child(6) .container .back {
+  background-color: #e31516;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-4 {
+  transform: translate3d(45vmin, 0vmin, 25vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) {
+  width: 8vmin;
+  height: 1vmin;
+  transform: translate3d(0, 0, 0);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container .left {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container .right {
+  width: 8vmin;
+  height: 1vmin;
+  background-color: #BC7D3D;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container .top {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container .bottom {
+  background-color: #c58a4d;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container .front {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container .back {
+  background-color: #9d6933;
+  width: 8vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(1) .container .bottom {
+  box-shadow: 0 0 5vmin #000;
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) {
+  width: 2vmin;
+  height: 7vmin;
+  transform: translate3d(3vmin, -1vmin, 0);
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container .left {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container .right {
+  width: 2vmin;
+  height: 7vmin;
+  background-color: #4CB648;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1vmin) translateZ(2vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container .top {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1vmin) translateZ(7vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container .bottom {
+  background-color: #5dbe5a;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container .front {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(2) .container .back {
+  background-color: #40993c;
+  width: 2vmin;
+  height: 7vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) {
+  width: 8vmin;
+  height: 1.5vmin;
+  transform: translate3d(0vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container .left {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #AE7CB7;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container .right {
+  width: 8vmin;
+  height: 1.5vmin;
+  background-color: #AE7CB7;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-4vmin) translateZ(8vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container .top {
+  background-color: #b88cc0;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(4vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container .bottom {
+  background-color: #b88cc0;
+  width: 8vmin;
+  height: 8vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container .front {
+  background-color: #9e62a9;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(3) .container .back {
+  background-color: #9e62a9;
+  width: 8vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(4vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) {
+  width: 10vmin;
+  height: 1.5vmin;
+  transform: translate3d(-1vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container .left {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #AE7CB7;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container .right {
+  width: 3vmin;
+  height: 1.5vmin;
+  background-color: #AE7CB7;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(10vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container .top {
+  background-color: #b88cc0;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container .bottom {
+  background-color: #b88cc0;
+  width: 10vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container .front {
+  background-color: #9e62a9;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(4) .container .back {
+  background-color: #9e62a9;
+  width: 10vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) {
+  width: 3vmin;
+  height: 1.5vmin;
+  transform: translate3d(2.5vmin, -8vmin, 0);
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container .left {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #AE7CB7;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container .right {
+  width: 10vmin;
+  height: 1.5vmin;
+  background-color: #AE7CB7;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container .top {
+  background-color: #b88cc0;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(5vmin) translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container .bottom {
+  background-color: #b88cc0;
+  width: 3vmin;
+  height: 10vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container .front {
+  background-color: #9e62a9;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(5) .container .back {
+  background-color: #9e62a9;
+  width: 3vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) {
+  width: 3vmin;
+  height: 1vmin;
+  transform: translate3d(2.5vmin, -9vmin, 0);
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container .left {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #ECD016;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container .right {
+  width: 3vmin;
+  height: 1vmin;
+  background-color: #ECD016;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1.5vmin) translateZ(3vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container .top {
+  background-color: #eed52e;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1.5vmin) translateZ(1vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container .bottom {
+  background-color: #eed52e;
+  width: 3vmin;
+  height: 3vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container .front {
+  background-color: #c9b110;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1.5vmin);
+}
+
+body .scene .flowers #flower-4 div:nth-child(6) .container .back {
+  background-color: #c9b110;
+  width: 3vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1.5vmin);
+}
+
+body .scene .bee {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  transform-origin: center left;
+  transform: translate3d(25vmin, -10vmin, 0);
+  animation: fly 10s ease-in-out infinite alternate;
+}
+
+@keyframes fly {
+  33% {
+    transform: translate3d(25vmin, -20vmin, 0vmin) rotate3d(0, 0.2, 0.05, 20deg);
+  }
+
+  66% {
+    transform: translate3d(25vmin, -20vmin, 0vmin) rotate3d(0, 0.2, 0.05, -20deg);
+  }
+
+  100% {
+    transform: translate3d(25vmin, -20vmin, 0vmin) rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+body .scene .bee .body,
+body .scene .bee .feet,
+body .scene .bee .eyes,
+body .scene .bee .antennas,
+body .scene .bee .wings,
+body .scene .bee .pyramid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+
+body .scene .bee .body #body-1 {
+  width: 4vmin;
+  height: 12vmin;
+  transform: translate3d(0vmin, -2vmin, 0);
+}
+
+body .scene .bee .body #body-1 .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .body #body-1 .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .body #body-1 .container .left {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-7.5vmin);
+}
+
+body .scene .bee .body #body-1 .container .right {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-7.5vmin) translateZ(4vmin);
+}
+
+body .scene .bee .body #body-1 .container .top {
+  background-color: #d6ad4d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(7.5vmin) translateZ(12vmin);
+}
+
+body .scene .bee .body #body-1 .container .bottom {
+  background-color: #d6ad4d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(7.5vmin);
+}
+
+body .scene .bee .body #body-1 .container .front {
+  background-color: #b68d2a;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: bottom left;
+  transform: translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-1 .container .back {
+  background-color: #b68d2a;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-2 {
+  width: 4vmin;
+  height: 12vmin;
+  transform: translate3d(4.05vmin, -2vmin, 0);
+}
+
+body .scene .bee .body #body-2 .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .body #body-2 .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .body #body-2 .container .left {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-7.5vmin);
+}
+
+body .scene .bee .body #body-2 .container .right {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-7.5vmin) translateZ(4vmin);
+}
+
+body .scene .bee .body #body-2 .container .top {
+  background-color: #0d0d0d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(7.5vmin) translateZ(12vmin);
+}
+
+body .scene .bee .body #body-2 .container .bottom {
+  background-color: #0d0d0d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(7.5vmin);
+}
+
+body .scene .bee .body #body-2 .container .front {
+  background-color: black;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: bottom left;
+  transform: translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-2 .container .back {
+  background-color: black;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-3 {
+  width: 4vmin;
+  height: 12vmin;
+  transform: translate3d(8.1vmin, -2vmin, 0);
+}
+
+body .scene .bee .body #body-3 .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .body #body-3 .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .body #body-3 .container .left {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-7.5vmin);
+}
+
+body .scene .bee .body #body-3 .container .right {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-7.5vmin) translateZ(4vmin);
+}
+
+body .scene .bee .body #body-3 .container .top {
+  background-color: #d6ad4d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(7.5vmin) translateZ(12vmin);
+}
+
+body .scene .bee .body #body-3 .container .bottom {
+  background-color: #d6ad4d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(7.5vmin);
+}
+
+body .scene .bee .body #body-3 .container .front {
+  background-color: #b68d2a;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: bottom left;
+  transform: translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-3 .container .back {
+  background-color: #b68d2a;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-4 {
+  width: 4vmin;
+  height: 12vmin;
+  transform: translate3d(12.15vmin, -2vmin, 0);
+}
+
+body .scene .bee .body #body-4 .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .body #body-4 .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .body #body-4 .container .left {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-7.5vmin);
+}
+
+body .scene .bee .body #body-4 .container .right {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-7.5vmin) translateZ(4vmin);
+}
+
+body .scene .bee .body #body-4 .container .top {
+  background-color: #0d0d0d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(7.5vmin) translateZ(12vmin);
+}
+
+body .scene .bee .body #body-4 .container .bottom {
+  background-color: #0d0d0d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(7.5vmin);
+}
+
+body .scene .bee .body #body-4 .container .front {
+  background-color: black;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: bottom left;
+  transform: translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-4 .container .back {
+  background-color: black;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-5 {
+  width: 4vmin;
+  height: 12vmin;
+  transform: translate3d(16.2vmin, -2vmin, 0);
+}
+
+body .scene .bee .body #body-5 .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .body #body-5 .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .body #body-5 .container .left {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-7.5vmin);
+}
+
+body .scene .bee .body #body-5 .container .right {
+  width: 15vmin;
+  height: 12vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-7.5vmin) translateZ(4vmin);
+}
+
+body .scene .bee .body #body-5 .container .top {
+  background-color: #d6ad4d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(7.5vmin) translateZ(12vmin);
+}
+
+body .scene .bee .body #body-5 .container .bottom {
+  background-color: #d6ad4d;
+  width: 4vmin;
+  height: 15vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(7.5vmin);
+}
+
+body .scene .bee .body #body-5 .container .front {
+  background-color: #b68d2a;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: bottom left;
+  transform: translateZ(7.5vmin);
+}
+
+body .scene .bee .body #body-5 .container .back {
+  background-color: #b68d2a;
+  width: 4vmin;
+  height: 12vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(7.5vmin);
+}
+
+body .scene .bee .body #stinger {
+  transform: translate3d(20.2vmin, -6vmin, 0vmin) rotateZ(90deg);
+  width: 5vmin;
+  height: 5vmin;
+}
+
+body .scene .bee .body #stinger .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .body #stinger .container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  transform: rotateX(90deg) translateZ(-2.5vmin);
+}
+
+body .scene .bee .body #stinger .container * {
+  position: absolute;
+  bottom: 0;
+}
+
+body .scene .bee .body #stinger .container span:nth-child(1) {
+  width: 5vmin;
+  height: 5vmin;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: #040404;
+  background-image: linear-gradient(90deg, #111, black);
+  transform-origin: bottom;
+  transform: rotateX(90deg) rotateZ(90deg) translateY(-7.5vmin) translateY(5vmin) rotateX(-119.5deg);
+}
+
+body .scene .bee .body #stinger .container span:nth-child(2) {
+  width: 5vmin;
+  height: 5vmin;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: black;
+  background-image: linear-gradient(90deg, #111, black);
+  transform-origin: bottom;
+  transform: rotateX(90deg) rotateZ(180deg) translateY(-7.5vmin) translateY(5vmin) rotateX(-119.5deg);
+}
+
+body .scene .bee .body #stinger .container span:nth-child(3) {
+  width: 5vmin;
+  height: 5vmin;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: black;
+  background-image: linear-gradient(90deg, #111, black);
+  transform-origin: bottom;
+  transform: rotateX(90deg) rotateZ(270deg) translateY(-7.5vmin) translateY(5vmin) rotateX(-119.5deg);
+}
+
+body .scene .bee .body #stinger .container span:nth-child(4) {
+  width: 5vmin;
+  height: 5vmin;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: black;
+  background-image: linear-gradient(90deg, #111, black);
+  transform-origin: bottom;
+  transform: rotateX(90deg) rotateZ(360deg) translateY(-7.5vmin) translateY(5vmin) rotateX(-119.5deg);
+}
+
+body .scene .bee .eyes #eye-left {
+  width: 1vmin;
+  height: 5.5vmin;
+  transform: translate3d(-0.2vmin, -6.5vmin, 4.6vmin);
+}
+
+body .scene .bee .eyes #eye-left .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .eyes #eye-left .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .eyes #eye-left .container .left {
+  width: 6vmin;
+  height: 5.5vmin;
+  background-color: white;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-3vmin);
+}
+
+body .scene .bee .eyes #eye-left .container .right {
+  width: 6vmin;
+  height: 5.5vmin;
+  background-color: white;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-3vmin) translateZ(1vmin);
+}
+
+body .scene .bee .eyes #eye-left .container .top {
+  background-color: white;
+  width: 1vmin;
+  height: 6vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(3vmin) translateZ(5.5vmin);
+}
+
+body .scene .bee .eyes #eye-left .container .bottom {
+  background-color: white;
+  width: 1vmin;
+  height: 6vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(3vmin);
+}
+
+body .scene .bee .eyes #eye-left .container .front {
+  background-color: #ebebeb;
+  width: 1vmin;
+  height: 5.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(3vmin);
+}
+
+body .scene .bee .eyes #eye-left .container .back {
+  background-color: #ebebeb;
+  width: 1vmin;
+  height: 5.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(3vmin);
+}
+
+body .scene .bee .eyes #eye-left .container .left {
+  background-image: linear-gradient(180deg, white 0% 50%, #0000 50% 100%), linear-gradient(90deg, #0000 0% 25%, black 20% 75%, #0000 75% 100%);
+}
+
+body .scene .bee .eyes #eye-right {
+  width: 1vmin;
+  height: 5.5vmin;
+  transform: translate3d(-0.2vmin, -6.5vmin, -4.6vmin);
+}
+
+body .scene .bee .eyes #eye-right .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .eyes #eye-right .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .eyes #eye-right .container .left {
+  width: 6vmin;
+  height: 5.5vmin;
+  background-color: white;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-3vmin);
+}
+
+body .scene .bee .eyes #eye-right .container .right {
+  width: 6vmin;
+  height: 5.5vmin;
+  background-color: white;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-3vmin) translateZ(1vmin);
+}
+
+body .scene .bee .eyes #eye-right .container .top {
+  background-color: white;
+  width: 1vmin;
+  height: 6vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(3vmin) translateZ(5.5vmin);
+}
+
+body .scene .bee .eyes #eye-right .container .bottom {
+  background-color: white;
+  width: 1vmin;
+  height: 6vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(3vmin);
+}
+
+body .scene .bee .eyes #eye-right .container .front {
+  background-color: #ebebeb;
+  width: 1vmin;
+  height: 5.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(3vmin);
+}
+
+body .scene .bee .eyes #eye-right .container .back {
+  background-color: #ebebeb;
+  width: 1vmin;
+  height: 5.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(3vmin);
+}
+
+body .scene .bee .eyes #eye-right .container .left {
+  background-image: linear-gradient(180deg, white 0% 50%, #0000 50% 100%), linear-gradient(90deg, #0000 0% 25%, black 20% 75%, #0000 75% 100%);
+}
+
+body .scene .bee .wings #wing-left {
+  width: 10vmin;
+  height: 1vmin;
+  transform: translate3d(4.5vmin, -9vmin, 7.5vmin) rotateX(-20deg);
+  animation: flap-left 0.075s linear infinite alternate;
+}
+
+body .scene .bee .wings #wing-left .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .wings #wing-left .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .wings #wing-left .container .left {
+  width: 20vmin;
+  height: 1vmin;
+  background-color: #8DBCB8;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-10vmin);
+}
+
+body .scene .bee .wings #wing-left .container .right {
+  width: 20vmin;
+  height: 1vmin;
+  background-color: #8DBCB8;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-10vmin) translateZ(10vmin);
+}
+
+body .scene .bee .wings #wing-left .container .top {
+  background-color: #9dc5c2;
+  width: 10vmin;
+  height: 20vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(10vmin) translateZ(1vmin);
+}
+
+body .scene .bee .wings #wing-left .container .bottom {
+  background-color: #9dc5c2;
+  width: 10vmin;
+  height: 20vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(10vmin);
+}
+
+body .scene .bee .wings #wing-left .container .front {
+  background-color: #73ada8;
+  width: 10vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(10vmin);
+}
+
+body .scene .bee .wings #wing-left .container .back {
+  background-color: #73ada8;
+  width: 10vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(10vmin);
+}
+
+@keyframes flap-left {
+  to {
+    transform: translate3d(4.5vmin, -9vmin, 7.5vmin) rotateX(20deg);
+  }
+}
+
+body .scene .bee .wings #wing-right {
+  width: 10vmin;
+  height: 1vmin;
+  transform: translate3d(4.5vmin, -9vmin, -7.5vmin) rotateX(-20deg);
+  animation: flap-right 0.075s linear infinite alternate-reverse;
+}
+
+body .scene .bee .wings #wing-right .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .wings #wing-right .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .wings #wing-right .container .left {
+  width: 20vmin;
+  height: 1vmin;
+  background-color: #8DBCB8;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-10vmin);
+}
+
+body .scene .bee .wings #wing-right .container .right {
+  width: 20vmin;
+  height: 1vmin;
+  background-color: #8DBCB8;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-10vmin) translateZ(10vmin);
+}
+
+body .scene .bee .wings #wing-right .container .top {
+  background-color: #9dc5c2;
+  width: 10vmin;
+  height: 20vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(10vmin) translateZ(1vmin);
+}
+
+body .scene .bee .wings #wing-right .container .bottom {
+  background-color: #9dc5c2;
+  width: 10vmin;
+  height: 20vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(10vmin);
+}
+
+body .scene .bee .wings #wing-right .container .front {
+  background-color: #73ada8;
+  width: 10vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: translateZ(10vmin);
+}
+
+body .scene .bee .wings #wing-right .container .back {
+  background-color: #73ada8;
+  width: 10vmin;
+  height: 1vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(10vmin);
+}
+
+@keyframes flap-right {
+  to {
+    transform: translate3d(4.5vmin, -9vmin, -7.5vmin) rotateX(20deg);
+  }
+}
+
+body .scene .bee .antennas #antenna-left {
+  width: 1vmin;
+  height: 2vmin;
+  transform: translate3d(0, -14vmin, 4vmin);
+}
+
+body .scene .bee .antennas #antenna-left .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .antennas #antenna-left .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .antennas #antenna-left .container .left {
+  width: 1vmin;
+  height: 2vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left .container .right {
+  width: 1vmin;
+  height: 2vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-0.5vmin) translateZ(1vmin);
+}
+
+body .scene .bee .antennas #antenna-left .container .top {
+  background-color: #0d0d0d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(0.5vmin) translateZ(2vmin);
+}
+
+body .scene .bee .antennas #antenna-left .container .bottom {
+  background-color: #0d0d0d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left .container .front {
+  background-color: black;
+  width: 1vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: translateZ(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left .container .back {
+  background-color: black;
+  width: 1vmin;
+  height: 2vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left-front {
+  width: 1vmin;
+  height: 1.5vmin;
+  transform: translate3d(-1vmin, -14.5vmin, 4vmin);
+}
+
+body .scene .bee .antennas #antenna-left-front .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .antennas #antenna-left-front .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .antennas #antenna-left-front .container .left {
+  width: 1vmin;
+  height: 1.5vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left-front .container .right {
+  width: 1vmin;
+  height: 1.5vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-0.5vmin) translateZ(1vmin);
+}
+
+body .scene .bee .antennas #antenna-left-front .container .top {
+  background-color: #d6ad4d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(0.5vmin) translateZ(1.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left-front .container .bottom {
+  background-color: #d6ad4d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left-front .container .front {
+  background-color: #b68d2a;
+  width: 1vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-left-front .container .back {
+  background-color: #b68d2a;
+  width: 1vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right {
+  width: 1vmin;
+  height: 2vmin;
+  transform: translate3d(0, -14vmin, -4vmin);
+}
+
+body .scene .bee .antennas #antenna-right .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .antennas #antenna-right .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .antennas #antenna-right .container .left {
+  width: 1vmin;
+  height: 2vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right .container .right {
+  width: 1vmin;
+  height: 2vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-0.5vmin) translateZ(1vmin);
+}
+
+body .scene .bee .antennas #antenna-right .container .top {
+  background-color: #0d0d0d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(0.5vmin) translateZ(2vmin);
+}
+
+body .scene .bee .antennas #antenna-right .container .bottom {
+  background-color: #0d0d0d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right .container .front {
+  background-color: black;
+  width: 1vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: translateZ(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right .container .back {
+  background-color: black;
+  width: 1vmin;
+  height: 2vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right-front {
+  width: 1vmin;
+  height: 1.5vmin;
+  transform: translate3d(-1vmin, -14.5vmin, -4vmin);
+}
+
+body .scene .bee .antennas #antenna-right-front .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .antennas #antenna-right-front .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .antennas #antenna-right-front .container .left {
+  width: 1vmin;
+  height: 1.5vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right-front .container .right {
+  width: 1vmin;
+  height: 1.5vmin;
+  background-color: #D1A438;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-0.5vmin) translateZ(1vmin);
+}
+
+body .scene .bee .antennas #antenna-right-front .container .top {
+  background-color: #d6ad4d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(0.5vmin) translateZ(1.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right-front .container .bottom {
+  background-color: #d6ad4d;
+  width: 1vmin;
+  height: 1vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right-front .container .front {
+  background-color: #b68d2a;
+  width: 1vmin;
+  height: 1.5vmin;
+  transform-origin: bottom left;
+  transform: translateZ(0.5vmin);
+}
+
+body .scene .bee .antennas #antenna-right-front .container .back {
+  background-color: #b68d2a;
+  width: 1vmin;
+  height: 1.5vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(0.5vmin);
+}
+
+body .scene .bee .feet div {
+  width: 2vmin;
+  height: 4vmin;
+}
+
+body .scene .bee .feet div .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body .scene .bee .feet div .container * {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .scene .bee .feet div .container .left {
+  width: 2vmin;
+  height: 4vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(-90deg) translateX(-1vmin);
+}
+
+body .scene .bee .feet div .container .right {
+  width: 2vmin;
+  height: 4vmin;
+  background-color: black;
+  transform-origin: left top;
+  transform: rotateY(90deg) translateX(-1vmin) translateZ(2vmin);
+}
+
+body .scene .bee .feet div .container .top {
+  background-color: #0d0d0d;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(90deg) translateY(1vmin) translateZ(4vmin);
+}
+
+body .scene .bee .feet div .container .bottom {
+  background-color: #0d0d0d;
+  width: 2vmin;
+  height: 2vmin;
+  transform-origin: bottom left;
+  transform: rotateX(-90deg) translateY(1vmin);
+}
+
+body .scene .bee .feet div .container .front {
+  background-color: black;
+  width: 2vmin;
+  height: 4vmin;
+  transform-origin: bottom left;
+  transform: translateZ(1vmin);
+}
+
+body .scene .bee .feet div .container .back {
+  background-color: black;
+  width: 2vmin;
+  height: 4vmin;
+  transform-origin: center;
+  transform: rotateY(180deg) translateZ(1vmin);
+}
+
+body .scene .bee .feet #feet-1 {
+  transform: translate3d(4.5vmin, 0, 6vmin);
+}
+
+body .scene .bee .feet #feet-2 {
+  transform: translate3d(9vmin, 0, 6vmin);
+}
+
+body .scene .bee .feet #feet-3 {
+  transform: translate3d(13.5vmin, 0, 6vmin);
+}
+
+body .scene .bee .feet #feet-4 {
+  transform: translate3d(4.5vmin, 0, -6vmin);
+}
+
+body .scene .bee .feet #feet-5 {
+  transform: translate3d(9vmin, 0, -6vmin);
+}
+
+body .scene .bee .feet #feet-6 {
+  transform: translate3d(13.5vmin, 0, -6vmin);
+}
