@@ -31,7 +31,7 @@ To use this glassmorphism loader in your project, simply copy the HTML and CSS c
 1. Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/glassmorphism-loader.git
+git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2039%20%5D%20-%20Glassmorphism%20Loader.git
 ```
 
 2. Open the `index.html` file in your preferred web browser to view the glassmorphism loader in action.
