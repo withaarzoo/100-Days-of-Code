@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding and viewport settings for responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title of the web page -->
+    <title>ON-OFF Toggle Switch</title>
+</head>
+
+<body>
+    <!-- Container for the toggle switch -->
+    <div class="container">
+        <!-- Hidden checkbox input used to control the toggle switch state -->
+        <input hidden id="check" name="check" type="checkbox">
+        <!-- Label associated with the checkbox to style and control the toggle switch -->
+        <label class="toggle" for="check">
+            <!-- Circle element inside the toggle switch -->
+            <div class="toggle__circle"></div>
+        </label>
+        <!-- Text labels for the toggle switch -->
+        <div class="toggle-text">
+            <!-- Text for the 'N' (off) state -->
+            <span>N</span>
+            <!-- Text for the 'F' (on) state -->
+            <span>F</span>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+/* Import the 'Inter' font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Reset default margin and padding for all elements, and set box-sizing to border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body element */
+body {
+    /* Center content horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Set minimum height to full viewport height */
+    min-height: 100vh;
+    /* Background gradient from top left to bottom right */
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    /* Apply the 'Inter' font family */
+    font-family: "Inter", sans-serif;
+}
+
+/* Style for the container div */
+.container {
+    /* Center the container */
+    margin: auto;
+    /* Set text color */
+    color: hsl(0, 0%, 30%);
+    /* Set font weight and size */
+    font-weight: 900;
+    font-size: 6rem;
+    /* Use flexbox layout */
+    display: flex;
+}
+
+/* Style for the toggle switch label */
+.toggle {
+    /* Set dimensions */
+    width: 60px;
+    height: 155px;
+    /* Background color and border radius */
+    background-color: hsl(0, 0%, 80%);
+    border-radius: 1.7rem;
+    /* Padding and cursor style */
+    padding: .25rem 0;
+    cursor: pointer;
+    /* Center content horizontally */
+    display: flex;
+    justify-content: center;
+    /* Smooth background color transition */
+    transition: background-color 300ms 300ms;
+}
+
+/* Style for the circle inside the toggle switch */
+.toggle__circle {
+    /* Set dimensions */
+    width: 50px;
+    height: 50px;
+    /* Background color and border radius */
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 50%;
+    /* Position the circle at the bottom of the toggle */
+    margin-top: calc(155px - (.25rem * 2) - 50px);
+    /* Smooth transition for the margin */
+    transition: margin 500ms ease-in-out;
+}
+
+/* Style for the text next to the toggle switch */
+.toggle-text {
+    /* Use flexbox layout and vertical direction */
+    display: flex;
+    flex-direction: column;
+    /* Adjust line height */
+    line-height: .8;
+}
+
+/* Style when the checkbox is checked */
+#check:checked+.toggle>.toggle__circle {
+    /* Move the circle to the top */
+    margin-top: 0;
+}
+
+/* Change background color of toggle when checked */
+#check:checked+.toggle {
+    background-color: #41a63c;
+}
