@@ -252,11 +252,11 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
   
 ## Contact Me
 
-- **YouTube:** [https://www.youtube.com/@codewithaarzoo?sub_confirmation=1]
-- **Instagram:** [https://www.instagram.com/withaarzoo/]
-- **X:** [https://x.com/withaarzoo]
-- **Threads:** [https://www.threads.net/@withaarzoo]
-- **My Agency:** [https://dgisight.com/]
+- **YouTube:** [click here](https://www.youtube.com/@codewithaarzoo?sub_confirmation=1)
+- **Instagram:** [click here](https://www.instagram.com/withaarzoo/])
+- **X:** [click here](https://x.com/withaarzoo)
+- **Threads:** [click here](https://www.threads.net/@withaarzoo)
+- **My Agency:** [click here](https://dgisight.com/)
 
 Feel free to explore the projects and code snippets. If you have any questions or suggestions, don't hesitate to reach out!
 
