@@ -249,6 +249,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **ON-OFF Toggle Switch**
 - **Short Description:** This project contains HTML and CSS code for implementing an ON-OFF toggle switch with accompanying comments for clarity and understanding. The toggle switch is designed using HTML and styled using CSS, utilizing modern techniques for layout, styling, and interactivity.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2041%20%5D%20-%20On%20Off%20Toggle%20Switch)
+
+### Day 42
+
+- **Animated 3D Loader**
+- **Short Description:** This project provides an animated 3D loader implemented in HTML and CSS. The loader consists of four boxes that move in a coordinated manner, creating a visually appealing loading animation. Each box has three sides with different colors, giving the illusion of a 3D effect as they rotate and animate.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2042%20%5D%20-%20Animated%203D%20Loader)
   
 ## Contact Me
 
