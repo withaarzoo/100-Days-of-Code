@@ -255,6 +255,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Animated 3D Loader**
 - **Short Description:** This project provides an animated 3D loader implemented in HTML and CSS. The loader consists of four boxes that move in a coordinated manner, creating a visually appealing loading animation. Each box has three sides with different colors, giving the illusion of a 3D effect as they rotate and animate.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2042%20%5D%20-%20Animated%203D%20Loader)
+
+### Day 43
+
+- **3D Credit Card Flip Animation**
+- **Short Description:** This project contains HTML and CSS code for creating a 3D credit card flip animation. It simulates the front and back sides of a credit card and includes animations for flipping the card when hovered over.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2043%20%5D%20-%203D%20Credit%20Card%20Flip%20Animation)
   
 ## Contact Me
 
