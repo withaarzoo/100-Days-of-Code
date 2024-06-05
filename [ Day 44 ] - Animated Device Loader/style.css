@@ -1,0 +1,154 @@
+/* Styling for the body element */
+body {
+    /* Use flexbox layout to center content horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Set the minimum height to full viewport height */
+    min-height: 100vh;
+    /* Apply a linear gradient background */
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+/* Styling for the loader elements */
+.loader {
+    /* Position the loader absolutely in the center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    /* Set initial dimensions and positioning */
+    width: 160px;
+    height: 100px;
+    margin-left: -80px;
+    margin-top: -50px;
+    /* Round the corners of the loader */
+    border-radius: 5px;
+    /* Set the background color */
+    background: #1e3f57;
+    /* Apply animation */
+    animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+}
+
+/* Styling for the second loader element */
+.loader:nth-child(2) {
+    z-index: 11;
+    /* Set initial dimensions and positioning */
+    width: 150px;
+    height: 90px;
+    margin-top: -45px;
+    margin-left: -75px;
+    /* Round the corners differently */
+    border-radius: 3px;
+    /* Set a different background color */
+    background: #3c517d;
+    /* Use a different animation */
+    animation-name: dot2_;
+}
+
+/* Styling for the third loader element */
+.loader:nth-child(3) {
+    z-index: 12;
+    /* Set initial dimensions and positioning */
+    width: 40px;
+    height: 20px;
+    margin-top: 50px;
+    margin-left: -20px;
+    /* Round only the bottom corners */
+    border-radius: 0 0 5px 5px;
+    /* Set another different background color */
+    background: #6bb2cd;
+    /* Use another different animation */
+    animation-name: dot3_;
+}
+
+/* Keyframes for the first loader's animation */
+@keyframes dot1_ {
+
+    /* Define the animation states */
+    3%,
+    97% {
+        width: 160px;
+        height: 100px;
+        margin-top: -50px;
+        margin-left: -80px;
+    }
+
+    30%,
+    36% {
+        width: 80px;
+        height: 120px;
+        margin-top: -60px;
+        margin-left: -40px;
+    }
+
+    63%,
+    69% {
+        width: 40px;
+        height: 80px;
+        margin-top: -40px;
+        margin-left: -20px;
+    }
+}
+
+/* Keyframes for the second loader's animation */
+@keyframes dot2_ {
+
+    /* Define the animation states */
+    3%,
+    97% {
+        height: 90px;
+        width: 150px;
+        margin-left: -75px;
+        margin-top: -45px;
+    }
+
+    30%,
+    36% {
+        width: 70px;
+        height: 96px;
+        margin-left: -35px;
+        margin-top: -48px;
+    }
+
+    63%,
+    69% {
+        width: 32px;
+        height: 60px;
+        margin-left: -16px;
+        margin-top: -30px;
+    }
+}
+
+/* Keyframes for the third loader's animation */
+@keyframes dot3_ {
+
+    /* Define the animation states */
+    3%,
+    97% {
+        height: 20px;
+        width: 40px;
+        margin-left: -20px;
+        margin-top: 50px;
+    }
+
+    30%,
+    36% {
+        width: 8px;
+        height: 8px;
+        margin-left: -5px;
+        margin-top: 49px;
+        /* Round the entire element */
+        border-radius: 8px;
+    }
+
+    63%,
+    69% {
+        width: 16px;
+        height: 4px;
+        margin-left: -8px;
+        margin-top: -37px;
+        /* Round the entire element differently */
+        border-radius: 10px;
+    }
+}
