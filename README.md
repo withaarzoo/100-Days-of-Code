@@ -261,6 +261,10 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **3D Credit Card Flip Animation**
 - **Short Description:** This project contains HTML and CSS code for creating a 3D credit card flip animation. It simulates the front and back sides of a credit card and includes animations for flipping the card when hovered over.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2043%20%5D%20-%203D%20Credit%20Card%20Flip%20Animation)
+
+- **Day 44**
+- **Short Description:** This project provides a set of animated loader elements styled with CSS. These loaders are designed to resemble multiple electronic devices and can be easily integrated into web pages to indicate loading or processing.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2044%20%5D%20-%20Animated%20Device%20Loader)
   
 ## Contact Me
 
