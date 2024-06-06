@@ -33,7 +33,7 @@ You can download the full source code for this project from the following link: 
 1. Clone the repository to your local machine.
 
 ```bash
-git clone https://github.com/yourusername/animated-loader.git
+git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2045%20%5D%20-%20Animated%20YOU%20Loader.git
 ```
 
 2. Open the `index.html` file in your web browser.
