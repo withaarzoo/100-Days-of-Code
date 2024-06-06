@@ -273,6 +273,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Animated YOU Loader**
 - **Short Description:** This project demonstrates the implementation of an animated loader using HTML and CSS. The loader is designed to provide visual feedback to users while waiting for content to load or processes to complete. It utilizes SVG elements and CSS animations to create a visually appealing loading animation.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2045%20%5D%20-%20Animated%20YOU%20Loader)
+
+### Day 46
+
+- **Neumorphism Toggle Button**
+- **Short Description:** This project showcases a stylish toggle button designed using the neumorphism design trend. Neumorphism, a portmanteau of "new" and "skeuomorphism," is characterized by subtle shadows and highlights that create a soft, extruded plastic look. The toggle button is created using HTML and CSS, emphasizing modern design aesthetics and smooth transitions.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2046%20%5D%20-%20Neumorphism%20Toggle%20Button)
   
 ## Contact Me
 
