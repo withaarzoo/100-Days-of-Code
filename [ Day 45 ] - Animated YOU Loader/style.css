@@ -1,0 +1,127 @@
+/* Styling the body */
+body {
+    /* Flexbox setup for centering content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Minimum height to cover the viewport */
+    /* Background gradient */
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+/* Absolute positioning */
+.absolute {
+    position: absolute;
+}
+
+/* Display inline-block */
+.inline-block {
+    display: inline-block;
+}
+
+/* Loader container styles */
+.loader {
+    /* Flexbox setup */
+    display: flex;
+    margin: 0.25em 0;
+    /* Margin for spacing */
+}
+
+/* Width set to 0.5em */
+.w-2 {
+    width: 0.5em;
+}
+
+/* Animation for dash offset */
+.dash {
+    animation: dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite;
+}
+
+/* Animation for spinning loader */
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite, spin 8s ease-in-out infinite, dashOffset 2s linear infinite;
+    transform-origin: center;
+    /* Centering transformation origin */
+}
+
+/* Keyframes for dashArray animation */
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+        /* Starting dash array values */
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+        /* Midway dash array values */
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+        /* Ending dash array values */
+    }
+}
+
+/* Keyframes for spinDashArray animation */
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+        /* Starting dash array values */
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+        /* Midway dash array values */
+    }
+
+    100% {
+        stroke-dasharray: 270 90;
+        /* Ending dash array values */
+    }
+}
+
+/* Keyframes for dashOffset animation */
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 365;
+        /* Starting dash offset value */
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+        /* Ending dash offset value */
+    }
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+        /* Starting rotation */
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+        /* Rotation at different points of the animation */
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+        /* Rotation at different points of the animation */
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+        /* Rotation at different points of the animation */
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+        /* Ending rotation */
+    }
+}
