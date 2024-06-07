@@ -1,0 +1,91 @@
+/* Set body to use flexbox for centering content, with a gradient background */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+/* Loader container styling */
+.my-loader {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    /* Adds 3D perspective to the cube */
+    margin: 100px auto;
+    /* Centers the loader horizontally */
+}
+
+/* Rubik's cube container styling */
+.rubiks-cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    /* Ensures child elements are rendered in 3D space */
+    animation: my-rotateCube 5s infinite linear;
+    /* Animates the cube rotation */
+}
+
+/* General face styling for the Rubik's cube */
+.my-loader .face {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures child cubes wrap to fit the face */
+    width: 100%;
+    height: 100%;
+}
+
+/* Positioning the front face of the cube */
+.my-loader .face.front {
+    transform: translateZ(100px);
+}
+
+/* Positioning the back face of the cube */
+.my-loader .face.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+/* Positioning the left face of the cube */
+.my-loader .face.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+/* Positioning the right face of the cube */
+.my-loader .face.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+/* Positioning the top face of the cube */
+.my-loader .face.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+/* Positioning the bottom face of the cube */
+.my-loader .face.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+/* Styling for each small cube on the face */
+.my-loader .cube {
+    width: calc(100% / 3);
+    /* Each cube is one-third the width of the face */
+    height: calc(100% / 3);
+    /* Each cube is one-third the height of the face */
+    box-sizing: border-box;
+    border: 1px solid #000;
+    /* Adds border to each small cube */
+}
+
+/* Keyframes for the cube rotation animation */
+@keyframes my-rotateCube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
