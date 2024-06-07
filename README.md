@@ -279,6 +279,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Neumorphism Toggle Button**
 - **Short Description:** This project showcases a stylish toggle button designed using the neumorphism design trend. Neumorphism, a portmanteau of "new" and "skeuomorphism," is characterized by subtle shadows and highlights that create a soft, extruded plastic look. The toggle button is created using HTML and CSS, emphasizing modern design aesthetics and smooth transitions.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2046%20%5D%20-%20Neumorphism%20Toggle%20Button)
+
+### Day 47
+
+- **Animated Rubik Cube Loader**
+- **Short Description:** This project showcases an animated Rubik's Cube loader using HTML and CSS. The loader is a visually appealing animation that can be used as a loading indicator for web applications. The cube rotates smoothly, giving a 3D effect that enhances the user experience during loading times.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2047%20%5D%20-%20Animated%20Rubik%20Cube%20Loader)
   
 ## Contact Me
 
