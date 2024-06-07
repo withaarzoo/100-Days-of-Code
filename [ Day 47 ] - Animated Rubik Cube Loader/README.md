@@ -36,7 +36,7 @@ To get started with the animated Rubik's Cube loader, follow these steps:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/rubiks-cube-loader.git
+    git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2047%20%5D%20-%20Animated%20Rubik%20Cube%20Loader.git
     ```
 
 2. **Navigate to the project directory:**
