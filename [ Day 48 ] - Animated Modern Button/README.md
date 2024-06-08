@@ -29,7 +29,7 @@ You can download the full source code for this project from the following link: 
 To use this project, simply clone the repository and open the `index.html` file in your browser.
 
 ```sh
-git clone https://github.com/yourusername/sparkle-button-css.git
+git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2048%20%5D%20-%20Animated%20Modern%20Button.git
 cd sparkle-button-css
 open index.html
 ```
