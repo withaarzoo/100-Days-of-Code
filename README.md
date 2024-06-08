@@ -285,6 +285,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Animated Rubik Cube Loader**
 - **Short Description:** This project showcases an animated Rubik's Cube loader using HTML and CSS. The loader is a visually appealing animation that can be used as a loading indicator for web applications. The cube rotates smoothly, giving a 3D effect that enhances the user experience during loading times.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2047%20%5D%20-%20Animated%20Rubik%20Cube%20Loader)
+
+### Day 48
+
+- **Animated Modern Button**
+- **Short Description:** This project showcases a dynamic, interactive button with a sparkle animation effect using pure CSS. The button is designed to provide an engaging user experience with responsive animations that react to user interactions such as hovering and clicking. This project is a great example of using advanced CSS techniques like custom properties, animations, and pseudo-elements to create visually appealing UI components without relying on JavaScript.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2048%20%5D%20-%20Animated%20Modern%20Button)
   
 ## Contact Me
 
