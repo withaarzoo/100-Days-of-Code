@@ -28,7 +28,7 @@ You can download the full source code for this project from the following link: 
 To get started with this project, clone the repository and open the `index.html` file in your preferred web browser.
 
 ```bash
-git clone https://github.com/your-username/animated-heart-toggle-switch.git
+git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2049%20%5D%20-%20Animated%20Heart%20Shape%20Toggle%20Switch.git
 cd animated-heart-toggle-switch
 open index.html
 ```
