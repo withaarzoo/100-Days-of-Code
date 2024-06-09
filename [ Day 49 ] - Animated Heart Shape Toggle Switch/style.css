@@ -1,0 +1,209 @@
+/* Body styling */
+body {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    min-height: 100vh;
+    /* Full viewport height */
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    /* Gradient background */
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 1.2px;
+    /* Set scrollbar width */
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background: hsl(346, 66%, 91%);
+    /* Track background color */
+}
+
+/* Scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: hsl(347, 95%, 85%);
+    /* Handle color */
+    border-radius: 50px;
+    /* Rounded handle */
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(347, 80%, 65%);
+    /* Handle color on hover */
+}
+
+/* Hide input and pseudo-element before the love-heart label */
+.love-heart:before,
+#switch {
+    display: none;
+    /* Hide elements */
+}
+
+/* Love-heart styling */
+.love-heart,
+.love-heart::after {
+    border-color: hsl(231deg 28% 86%);
+    /* Border color */
+    border: 1px solid;
+    /* Border width */
+    border-top-left-radius: 100px;
+    /* Top-left border radius */
+    border-top-right-radius: 100px;
+    /* Top-right border radius */
+    width: 10px;
+    /* Width */
+    height: 8px;
+    /* Height */
+    border-bottom: 0;
+    /* No bottom border */
+}
+
+/* Round part of the heart */
+.round {
+    position: absolute;
+    /* Absolute positioning */
+    z-index: 1;
+    /* Stack order */
+    width: 8px;
+    /* Width */
+    height: 8px;
+    /* Height */
+    background: hsl(0deg 0% 100%);
+    /* Background color */
+    box-shadow: rgb(0 0 0 / 24%) 0px 0px 4px 0px;
+    /* Shadow effect */
+    border-radius: 100%;
+    /* Fully rounded */
+    left: 0px;
+    /* Position left */
+    bottom: -1px;
+    /* Position bottom */
+    transition: all .5s ease;
+    /* Transition effect */
+    animation: check-animation2 .5s forwards;
+    /* Initial animation */
+}
+
+/* Animation for checked state */
+input:checked+label .round {
+    transform: translate(0px, 0px);
+    /* Reset position */
+    animation: check-animation .5s forwards;
+    /* Checked state animation */
+    background-color: hsl(0deg 0% 100%);
+    /* Background color */
+}
+
+/* Keyframe animations */
+@keyframes check-animation {
+    0% {
+        transform: translate(0px, 0px);
+        /* Start position */
+    }
+
+    50% {
+        transform: translate(0px, 7px);
+        /* Mid position */
+    }
+
+    100% {
+        transform: translate(7px, 7px);
+        /* End position */
+    }
+}
+
+@keyframes check-animation2 {
+    0% {
+        transform: translate(7px, 7px);
+        /* Start position */
+    }
+
+    50% {
+        transform: translate(0px, 7px);
+        /* Mid position */
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        /* End position */
+    }
+}
+
+/* Love-heart main styling */
+.love-heart {
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+    position: relative;
+    /* Relative positioning */
+    transform: rotate(-45deg) translate(-50%, -33px) scale(4);
+    /* Transform effect */
+    display: block;
+    /* Display as block */
+    border-color: hsl(231deg 28% 86%);
+    /* Border color */
+    cursor: pointer;
+    /* Cursor style */
+    top: 0;
+    /* Top position */
+}
+
+/* Checked state styling */
+input:checked+.love-heart,
+input:checked+.love-heart::after,
+input:checked+.love-heart .bottom {
+    border-color: hsl(347deg 81% 61%);
+    /* Border color */
+    box-shadow: inset 6px -5px 0px 2px hsl(347deg 99% 72%);
+    /* Inset shadow */
+}
+
+/* Pseudo-elements styling */
+.love-heart::after,
+.love-heart .bottom {
+    content: "";
+    /* Content for pseudo-element */
+    display: block;
+    /* Display as block */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+    position: absolute;
+    /* Absolute positioning */
+    border-color: hsl(231deg 28% 86%);
+    /* Border color */
+}
+
+/* Right part of the heart */
+.love-heart::after {
+    right: -9px;
+    /* Right position */
+    transform: rotate(90deg);
+    /* Rotate */
+    top: 7px;
+    /* Top position */
+}
+
+/* Bottom part of the heart */
+.love-heart .bottom {
+    width: 11px;
+    /* Width */
+    height: 11px;
+    /* Height */
+    border-left: 1px solid;
+    /* Left border */
+    border-bottom: 1px solid;
+    /* Bottom border */
+    border-color: hsl(231deg 28% 86%);
+    /* Border color */
+    left: -1px;
+    /* Left position */
+    top: 5px;
+    /* Top position */
+    border-radius: 0px 0px 0px 5px;
+    /* Bottom-left border radius */
+}
