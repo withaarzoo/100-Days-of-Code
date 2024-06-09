@@ -291,6 +291,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Animated Modern Button**
 - **Short Description:** This project showcases a dynamic, interactive button with a sparkle animation effect using pure CSS. The button is designed to provide an engaging user experience with responsive animations that react to user interactions such as hovering and clicking. This project is a great example of using advanced CSS techniques like custom properties, animations, and pseudo-elements to create visually appealing UI components without relying on JavaScript.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2048%20%5D%20-%20Animated%20Modern%20Button)
+
+### Day 49
+
+- **Animated Heart Shape Toggle Switch**
+- **Short Description:** This project showcases an animated heart-shaped toggle switch implemented using HTML and CSS. The toggle switch is designed to visually represent a heart, which changes its appearance when toggled. The animation is smooth and visually appealing, providing a delightful user experience.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2049%20%5D%20-%20Animated%20Heart%20Shape%20Toggle%20Switch)
   
 ## Contact Me
 
