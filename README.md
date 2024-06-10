@@ -297,6 +297,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Animated Heart Shape Toggle Switch**
 - **Short Description:** This project showcases an animated heart-shaped toggle switch implemented using HTML and CSS. The toggle switch is designed to visually represent a heart, which changes its appearance when toggled. The animation is smooth and visually appealing, providing a delightful user experience.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2049%20%5D%20-%20Animated%20Heart%20Shape%20Toggle%20Switch)
+
+### Day 50
+
+- **Animated Loader**
+- **Short Description:** This project showcases a 3D animated loader built with HTML and CSS. The animation features a series of boxes that rotate and move to create an engaging visual effect. This README provides a comprehensive explanation of the project's structure and implementation.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2050%20%5D%20-%20Animated%20Loader)
   
 ## Contact Me
 
