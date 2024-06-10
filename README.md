@@ -1,6 +1,6 @@
 # 100 Days of Code
 
-Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the projects and code snippets I've worked on during my 100-day coding journey .
+Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the projects and code snippets I've worked on during my 100-day coding journey.
 
 ## Projects
 
