@@ -40,7 +40,7 @@ You need a web browser to view the animated loader. No additional software is re
 1. Clone the repository:
 
     ```sh
-    git clone https://github.com/your-username/animated-loader.git
+    git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2050%20%5D%20-%20Animated%20Loader.git
     ```
 
 2. Navigate to the project directory:
