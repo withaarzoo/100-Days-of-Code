@@ -1,0 +1,295 @@
+/* Style for the body to center content and set background */
+body {
+    display: flex;
+    /* Use flexbox layout */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    min-height: 100vh;
+    /* Minimum height of the viewport */
+    background-image: linear-gradient(to top, #bef5f2 0%, #fbe1e9 100%);
+    /* Background gradient */
+}
+
+/* Style for the container of the boxes */
+.boxes {
+    --size: 32px;
+    /* Variable for size of the boxes */
+    --duration: 800ms;
+    /* Variable for animation duration */
+    height: calc(var(--size) * 2);
+    /* Height of the container */
+    width: calc(var(--size) * 3);
+    /* Width of the container */
+    position: relative;
+    /* Relative positioning */
+    transform-style: preserve-3d;
+    /* Preserve 3D transformations */
+    transform-origin: 50% 50%;
+    /* Set transform origin to center */
+    margin-top: calc(var(--size) * 1.5 * -1);
+    /* Adjust top margin */
+    transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+    /* Initial transform for 3D effect */
+}
+
+/* Style for each box */
+.boxes .box {
+    width: var(--size);
+    /* Width of each box */
+    height: var(--size);
+    /* Height of each box */
+    top: 0;
+    /* Position from the top */
+    left: 0;
+    /* Position from the left */
+    position: absolute;
+    /* Absolute positioning */
+    transform-style: preserve-3d;
+    /* Preserve 3D transformations */
+}
+
+/* Animation for the first box */
+.boxes .box:nth-child(1) {
+    transform: translate(100%, 0);
+    /* Initial position */
+    -webkit-animation: box1 var(--duration) linear infinite;
+    /* Webkit animation */
+    animation: box1 var(--duration) linear infinite;
+    /* Standard animation */
+}
+
+/* Animation for the second box */
+.boxes .box:nth-child(2) {
+    transform: translate(0, 100%);
+    /* Initial position */
+    -webkit-animation: box2 var(--duration) linear infinite;
+    /* Webkit animation */
+    animation: box2 var(--duration) linear infinite;
+    /* Standard animation */
+}
+
+/* Animation for the third box */
+.boxes .box:nth-child(3) {
+    transform: translate(100%, 100%);
+    /* Initial position */
+    -webkit-animation: box3 var(--duration) linear infinite;
+    /* Webkit animation */
+    animation: box3 var(--duration) linear infinite;
+    /* Standard animation */
+}
+
+/* Animation for the fourth box */
+.boxes .box:nth-child(4) {
+    transform: translate(200%, 0);
+    /* Initial position */
+    -webkit-animation: box4 var(--duration) linear infinite;
+    /* Webkit animation */
+    animation: box4 var(--duration) linear infinite;
+    /* Standard animation */
+}
+
+/* Style for each side of the box */
+.boxes .box>div {
+    --background: #5C8DF6;
+    /* Default background color */
+    --top: auto;
+    /* Default top position */
+    --right: auto;
+    /* Default right position */
+    --bottom: auto;
+    /* Default bottom position */
+    --left: auto;
+    /* Default left position */
+    --translateZ: calc(var(--size) / 2);
+    /* Default translateZ value */
+    --rotateY: 0deg;
+    /* Default rotateY value */
+    --rotateX: 0deg;
+    /* Default rotateX value */
+    position: absolute;
+    /* Absolute positioning */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background: var(--background);
+    /* Set background color */
+    top: var(--top);
+    /* Set top position */
+    right: var(--right);
+    /* Set right position */
+    bottom: var(--bottom);
+    /* Set bottom position */
+    left: var(--left);
+    /* Set left position */
+    transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(var(--translateZ));
+    /* Apply transforms */
+}
+
+/* Specific styles for the first side of the box */
+.boxes .box>div:nth-child(1) {
+    --top: 0;
+    /* Top position */
+    --left: 0;
+    /* Left position */
+}
+
+/* Specific styles for the second side of the box */
+.boxes .box>div:nth-child(2) {
+    --background: #145af2;
+    /* Change background color */
+    --right: 0;
+    /* Right position */
+    --rotateY: 90deg;
+    /* Rotate 90 degrees around Y-axis */
+}
+
+/* Specific styles for the third side of the box */
+.boxes .box>div:nth-child(3) {
+    --background: #447cf5;
+    /* Change background color */
+    --rotateX: -90deg;
+    /* Rotate -90 degrees around X-axis */
+}
+
+/* Specific styles for the fourth side of the box */
+.boxes .box>div:nth-child(4) {
+    --background: #f2f6ff;
+    /* Change background color */
+    --top: 0;
+    /* Top position */
+    --left: 0;
+    /* Left position */
+    --translateZ: calc(var(--size) * 3 * -1);
+    /* Move along Z-axis */
+}
+
+/* Keyframes for the first box animation */
+@-webkit-keyframes box1 {
+
+    0%,
+    50% {
+        transform: translate(100%, 0);
+        /* Initial and halfway position */
+    }
+
+    100% {
+        transform: translate(200%, 0);
+        /* End position */
+    }
+}
+
+@keyframes box1 {
+
+    0%,
+    50% {
+        transform: translate(100%, 0);
+        /* Initial and halfway position */
+    }
+
+    100% {
+        transform: translate(200%, 0);
+        /* End position */
+    }
+}
+
+/* Keyframes for the second box animation */
+@-webkit-keyframes box2 {
+    0% {
+        transform: translate(0, 100%);
+        /* Initial position */
+    }
+
+    50% {
+        transform: translate(0, 0);
+        /* Halfway position */
+    }
+
+    100% {
+        transform: translate(100%, 0);
+        /* End position */
+    }
+}
+
+@keyframes box2 {
+    0% {
+        transform: translate(0, 100%);
+        /* Initial position */
+    }
+
+    50% {
+        transform: translate(0, 0);
+        /* Halfway position */
+    }
+
+    100% {
+        transform: translate(100%, 0);
+        /* End position */
+    }
+}
+
+/* Keyframes for the third box animation */
+@-webkit-keyframes box3 {
+
+    0%,
+    50% {
+        transform: translate(100%, 100%);
+        /* Initial and halfway position */
+    }
+
+    100% {
+        transform: translate(0, 100%);
+        /* End position */
+    }
+}
+
+@keyframes box3 {
+
+    0%,
+    50% {
+        transform: translate(100%, 100%);
+        /* Initial and halfway position */
+    }
+
+    100% {
+        transform: translate(0, 100%);
+        /* End position */
+    }
+}
+
+/* Keyframes for the fourth box animation */
+@-webkit-keyframes box4 {
+    0% {
+        transform: translate(200%, 0);
+        /* Initial position */
+    }
+
+    50% {
+        transform: translate(200%, 100%);
+        /* Halfway position */
+    }
+
+    100% {
+        transform: translate(100%, 100%);
+        /* End position */
+    }
+}
+
+@keyframes box4 {
+    0% {
+        transform: translate(200%, 0);
+        /* Initial position */
+    }
+
+    50% {
+        transform: translate(200%, 100%);
+        /* Halfway position */
+    }
+
+    100% {
+        transform: translate(100%, 100%);
+        /* End position */
+    }
+}
