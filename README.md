@@ -303,6 +303,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Animated Loader**
 - **Short Description:** This project showcases a 3D animated loader built with HTML and CSS. The animation features a series of boxes that rotate and move to create an engaging visual effect. This README provides a comprehensive explanation of the project's structure and implementation.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2050%20%5D%20-%20Animated%20Loader)
+
+### Day 51
+
+- **Animated Loader**
+- **Short Description:** This project showcases a simple yet elegant loading animation using HTML and CSS. The loader consists of a series of circles that animate in a visually appealing sequence, providing a smooth loading experience for users.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2051%20%5D%20-%20Animated%20Loader)
   
 ## Contact Me
 
