@@ -1,0 +1,305 @@
+/* Styling for the body element to center the content */
+body {
+    display: flex;
+    /* Use flexbox layout */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    min-height: 100vh;
+    /* Set the minimum height to 100% of the viewport height */
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    /* Background gradient */
+}
+
+/* Container for the loading spinner */
+.loadingspinner {
+    --circle: 26px;
+    /* Size of each circle */
+    --offset: 30px;
+    /* Distance between circles */
+    --duration: 2.4s;
+    /* Total duration of the animation cycle */
+    --delay: 0.2s;
+    /* Delay between animation starts */
+    --timing-function: ease-in-out;
+    /* Timing function for the animation */
+    --in-duration: 0.4s;
+    /* Duration for the fade-in effect */
+    --in-delay: 0.1s;
+    /* Delay for the fade-in effect */
+    --in-timing-function: ease-out;
+    /* Timing function for the fade-in effect */
+    width: calc(3 * var(--offset) + var(--circle));
+    /* Total width of the spinner */
+    height: calc(2 * var(--offset) + var(--circle));
+    /* Total height of the spinner */
+    padding: 0px;
+    /* No padding */
+    margin: 10px auto 30px auto;
+    /* Center horizontally with auto margins, with specific top and bottom margins */
+    position: relative;
+    /* Position relative to contain absolute positioned circles */
+}
+
+/* General styling for the circles */
+.loadingspinner div {
+    display: inline-block;
+    /* Inline-block display */
+    background: #615EFC;
+    /* Background color of the circles */
+    border: none;
+    /* No border */
+    border-radius: 50%;
+    /* Rounded corners to make circles */
+    width: var(--circle);
+    /* Width of the circles */
+    height: var(--circle);
+    /* Height of the circles */
+    position: absolute;
+    /* Absolute positioning */
+    padding: 0px;
+    /* No padding */
+    margin: 0px;
+    /* No margin */
+    font-size: 6pt;
+    /* Small font size (not used here but specified) */
+    color: black;
+    /* Text color (not used here but specified) */
+}
+
+/* Specific animation settings for each circle */
+.loadingspinner #circle1 {
+    left: calc(0 * var(--offset));
+    /* Initial left position */
+    top: calc(0 * var(--offset));
+    /* Initial top position */
+    animation: circle1 var(--duration) var(--delay) var(--timing-function) infinite,
+        circlefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+    /* Animations applied */
+}
+
+.loadingspinner #circle2 {
+    left: calc(0 * var(--offset));
+    /* Initial left position */
+    top: calc(1 * var(--offset));
+    /* Initial top position */
+    animation: circle2 var(--duration) var(--delay) var(--timing-function) infinite,
+        circlefadein var(--in-duration) calc(1 * var(--in-delay)) var(--in-timing-function) both;
+    /* Animations applied */
+}
+
+.loadingspinner #circle3 {
+    left: calc(1 * var(--offset));
+    /* Initial left position */
+    top: calc(1 * var(--offset));
+    /* Initial top position */
+    animation: circle3 var(--duration) var(--delay) var(--timing-function) infinite,
+        circlefadein var(--in-duration) calc(2 * var(--in-delay)) var(--in-timing-function) both;
+    /* Animations applied */
+}
+
+.loadingspinner #circle4 {
+    left: calc(2 * var(--offset));
+    /* Initial left position */
+    top: calc(1 * var(--offset));
+    /* Initial top position */
+    animation: circle4 var(--duration) var(--delay) var(--timing-function) infinite,
+        circlefadein var(--in-duration) calc(3 * var(--in-delay)) var(--in-timing-function) both;
+    /* Animations applied */
+}
+
+.loadingspinner #circle5 {
+    left: calc(3 * var(--offset));
+    /* Initial left position */
+    top: calc(1 * var(--offset));
+    /* Initial top position */
+    animation: circle5 var(--duration) var(--delay) var(--timing-function) infinite,
+        circlefadein var(--in-duration) calc(4 * var(--in-delay)) var(--in-timing-function) both;
+    /* Animations applied */
+}
+
+/* Keyframe animations for each circle's movement */
+@keyframes circle1 {
+    0% {
+        left: calc(0 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    8.333% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        left: calc(0 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    8.333% {
+        left: calc(0 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    16.67% {
+        left: calc(1 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    25.00% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    83.33% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    91.67% {
+        left: calc(1 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    100% {
+        left: calc(0 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+}
+
+@keyframes circle3 {
+
+    0%,
+    100% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    16.67% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    25.00% {
+        left: calc(1 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    33.33% {
+        left: calc(2 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    41.67% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    66.67% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    75.00% {
+        left: calc(2 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    83.33% {
+        left: calc(1 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    91.67% {
+        left: calc(1 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes circle4 {
+    0% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    33.33% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    41.67% {
+        left: calc(2 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    50.00% {
+        left: calc(3 * var(--offset));
+        top: calc(2 * var(--offset));
+    }
+
+    58.33% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+@keyframes circle5 {
+    0% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    50.00% {
+        left: calc(3 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    58.33% {
+        left: calc(3 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    66.67% {
+        left: calc(2 * var(--offset));
+        top: calc(0 * var(--offset));
+    }
+
+    75.00% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+
+    100% {
+        left: calc(2 * var(--offset));
+        top: calc(1 * var(--offset));
+    }
+}
+
+/* Keyframe animation for the fade-in effect */
+@keyframes circlefadein {
+    0% {
+        transform: scale(0.75);
+        /* Start with smaller size */
+        opacity: 0.0;
+        /* Start fully transparent */
+    }
+
+    100% {
+        transform: scale(1.0);
+        /* End at normal size */
+        opacity: 1.0;
+        /* End fully opaque */
+    }
+}
