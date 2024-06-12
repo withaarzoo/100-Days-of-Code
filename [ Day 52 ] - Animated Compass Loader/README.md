@@ -30,7 +30,7 @@ To use the animated compass loader in your project, follow these steps:
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/yourusername/animated-compass-loader.git
+    git clone https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2052%20%5D%20-%20Animated%20Compass%20Loader.git
     ```
 
 2. **Navigate to the Project Directory:**
