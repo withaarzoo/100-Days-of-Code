@@ -309,6 +309,12 @@ Welcome to my 100 Days of Code GitHub repository! Here, you'll find all the proj
 - **Animated Loader**
 - **Short Description:** This project showcases a simple yet elegant loading animation using HTML and CSS. The loader consists of a series of circles that animate in a visually appealing sequence, providing a smooth loading experience for users.
 - **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2051%20%5D%20-%20Animated%20Loader)
+
+### Day 52
+
+- **Animated Compass Loader**
+- **Short Description:** This project features an animated compass loader built using HTML and CSS. The loader is designed to be visually appealing and is implemented with scalable vector graphics (SVG) to ensure sharp rendering at any size. The compass loader can be used in web projects as a preloader or a loading animation.
+- **Jump into the project 👉** [click here](https://github.com/withaarzoo/100-Days-of-Code/tree/main/%5B%20Day%2052%20%5D%20-%20Animated%20Compass%20Loader)
   
 ## Contact Me
 
